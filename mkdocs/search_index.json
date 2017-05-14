@@ -2,23 +2,13 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "text": "Welcome!\n\n\nThis is notes written by X140Yu.\n\n\nSite's \nRepository\n\n\nMy \nBlog",
             "title": "Home"
         },
         {
-            "location": "/#welcome-to-mkdocs",
-            "text": "For full documentation visit  mkdocs.org .",
-            "title": "Welcome to MkDocs"
-        },
-        {
-            "location": "/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
-        },
-        {
-            "location": "/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Project layout"
+            "location": "/#welcome",
+            "text": "This is notes written by X140Yu.  Site's  Repository  My  Blog",
+            "title": "Welcome!"
         },
         {
             "location": "/swift/reactive-swift/",
@@ -219,21 +209,6 @@
             "location": "/swift/reactive-swift/#avoid-blocking-in-operators",
             "text": "Signal or producer operators should return a new signal or producer\n(respectively) as quickly as possible. Any work that the operator needs to\nperform should be part of the event handling logic,  not  part of the operator\ninvocation itself.  This guideline can be safely ignored when the purpose of an operator is to\nsynchronously retrieve one or more values from a stream, like  single()  or wait() .",
             "title": "Avoid blocking in operators"
-        },
-        {
-            "location": "/about/",
-            "text": "About?\n\n\nAbout!",
-            "title": "About"
-        },
-        {
-            "location": "/about/#about",
-            "text": "",
-            "title": "About?"
-        },
-        {
-            "location": "/about/#about_1",
-            "text": "",
-            "title": "About!"
         }
     ]
 }
