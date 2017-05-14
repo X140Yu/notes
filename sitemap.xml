@@ -4,15 +4,25 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-05-14</lastmod>
+     <lastmod>2017-05-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>/1/</loc>
-     <lastmod>2017-05-14</lastmod>
+     <loc>/swift/reactive-swift/</loc>
+     <lastmod>2017-05-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/about/</loc>
+     <lastmod>2017-05-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
