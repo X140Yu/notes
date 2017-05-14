@@ -1,1 +1,7 @@
-site_name: My Docs
+site_name: X140Yu's notes
+theme: 'material'
+pages:
+  - Home: index.md
+  - Swift:
+    - 'ReactiveSwift': 'swift/reactive-swift.md'
+  - About: about.md
