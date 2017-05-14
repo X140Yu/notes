@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Welcome!
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+This is notes written by X140Yu.
 
-## Commands
+Site's [Repository](https://github.com/X140Yu/notes)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+My [Blog](https://x140yu.github.io)

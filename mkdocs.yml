@@ -4,4 +4,3 @@ pages:
   - Home: index.md
   - Swift:
     - 'ReactiveSwift': 'swift/reactive-swift.md'
-  - About: about.md
