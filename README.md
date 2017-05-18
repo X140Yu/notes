@@ -1,3 +1,3 @@
 # notes
 
-https://x140yu.github.io/notes
+http://zhaoxinyu.me/notes

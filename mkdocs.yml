@@ -4,3 +4,4 @@ pages:
   - Home: index.md
   - Swift:
     - 'ReactiveSwift': 'swift/reactive-swift.md'
+    - 'FRP in Swift': 'swift/frp-in-swift.md'
