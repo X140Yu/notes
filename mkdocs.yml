@@ -5,3 +5,4 @@ pages:
   - Swift:
     - 'ReactiveSwift': 'swift/reactive-swift.md'
     - 'FRP in Swift': 'swift/frp-in-swift.md'
+    - 'Memory management': 'swift/memory-management.md'
