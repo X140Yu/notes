@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome!\n\n\nHi, these are notes written by X140Yu.\n\n\nSite's \nRepository\n\n\nMy \nBlog\n\n\nThis site's articles are all under \nCC Attribution-ShareAlike 4.0 International\n Licence.\n\n\n# run in local server\nmkdocs serve",
+            "text": "Welcome!\n\n\nHi, these are notes written by X140Yu.\n\n\nSite's \nRepository\n\n\nMy \nBlog\n\n\nThis site's articles are all under \nCC Attribution-ShareAlike 4.0 International\n Licence.\n\n\n# run in local server\nmkdocs serve\n# deploy to github pages\nmkdocs gh-deploy",
             "title": "Home"
         },
         {
             "location": "/#welcome",
-            "text": "Hi, these are notes written by X140Yu.  Site's  Repository  My  Blog  This site's articles are all under  CC Attribution-ShareAlike 4.0 International  Licence.  # run in local server\nmkdocs serve",
+            "text": "Hi, these are notes written by X140Yu.  Site's  Repository  My  Blog  This site's articles are all under  CC Attribution-ShareAlike 4.0 International  Licence.  # run in local server\nmkdocs serve\n# deploy to github pages\nmkdocs gh-deploy",
             "title": "Welcome!"
         },
         {
