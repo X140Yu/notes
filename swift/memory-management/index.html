@@ -9,20 +9,20 @@
       
       
       
-        <link rel="shortcut icon" href="/assets/images/favicon.png">
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
       
       <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
     
     
       
-        <title>X140Yu's notes</title>
+        <title>Memory management - X140Yu's notes</title>
       
     
     
-      <script src="/assets/javascripts/modernizr-56ade86843.js"></script>
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/application-4d0d3f2fbf.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application-4d0d3f2fbf.css">
       
     
     
@@ -59,7 +59,7 @@
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <a href="/" title="X140Yu's notes" class="md-icon md-icon--home md-header-nav__button">
+          <a href="../.." title="X140Yu's notes" class="md-icon md-icon--home md-header-nav__button">
           </a>
         
       </div>
@@ -70,7 +70,13 @@
         <span class="md-flex__ellipsis md-header-nav__title">
           
             
-            X140Yu's notes
+              
+                <span class="md-header-nav__parent">
+                  Swift
+                </span>
+              
+            
+            Memory management
           
         </span>
       </div>
@@ -135,7 +141,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/" title="Home" class="md-nav__link">
+    <a href="../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -145,10 +151,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Swift
@@ -166,7 +174,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/swift/reactive-swift/" title="ReactiveSwift" class="md-nav__link">
+    <a href="../reactive-swift/" title="ReactiveSwift" class="md-nav__link">
       ReactiveSwift
     </a>
   </li>
@@ -178,7 +186,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/swift/frp-in-swift/" title="FRP in Swift" class="md-nav__link">
+    <a href="../frp-in-swift/" title="FRP in Swift" class="md-nav__link">
       FRP in Swift
     </a>
   </li>
@@ -188,11 +196,47 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="/swift/memory-management/" title="Memory management" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Memory management
+      </label>
+    
+    <a href="./" title="Memory management" class="md-nav__link md-nav__link--active">
       Memory management
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#weak-unowned" title="到底使用 weak 还是 unowned？" class="md-nav__link">
+    到底使用 weak 还是 unowned？
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -208,12 +252,56 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#weak-unowned" title="到底使用 weak 还是 unowned？" class="md-nav__link">
+    到底使用 weak 还是 unowned？
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                <h1 id="swift">Swift 中的内存管理</h1>
+<h2 id="weak-unowned">到底使用 <code>weak</code> 还是 <code>unowned</code>？</h2>
+<p>先抛出结论，在你不理解到底该用哪个的时候，用 <code>weak</code> 是最稳妥的行为。</p>
+<p>根据 Apple 的<a href="https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html">文档</a>，</p>
+<blockquote>
+<p>Use an unowned reference only when you are sure that the reference always refers to an instance that has not been deallocated.</p>
+<p>If you try to access the value of an unowned reference after that instance has been deallocated, you’ll get a runtime error.</p>
+</blockquote>
+<p>也就是说，为了防止引用循环的出现，如果你确定，当前对象存在的时候，你引用的对象是 100% 存在的，那么用 <code>unowned</code> 就可以了。</p>
+<p>还有，<code>weak</code> 的变量必须是 <code>optional</code> 的。</p>
+<p>总之好好读文档啦</p>
+                
+                  
+                
+              
               
                 
               
@@ -224,6 +312,27 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../frp-in-swift/" title="FRP in Swift" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                FRP in Swift
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -244,8 +353,8 @@
       
     </div>
     
-      <script src="/assets/javascripts/application-6b599127bc.js"></script>
-      <script>app.initialize({url:{base:""}})</script>
+      <script src="../../assets/javascripts/application-6b599127bc.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
       
     
     

@@ -22,7 +22,7 @@
         },
         {
             "location": "/swift/frp-in-swift/",
-            "text": "Functional Reactive Programming in Swift\n\n\nDefinition\n\n\nWhat\n\n\nWhy\n\n\nBenefit\n\n\nSide effect\n\n\nHow\n\n\nBasic Examples\n\n\nThree Basic Concept\n\n\nStream\n\n\nTransform\n\n\nBinding\n\n\nExamples\n\n\nViewModels in Action",
+            "text": "Functional Reactive Programming in Swift\n\n\nDefinition\n\n\nWhat is Functional Programming?\n\n\n\n\nFirst-class and higher-order functions\n\n\nPure functions\n\n\n\n\nWhat is Reactive Programming?\n\n\nReactive programming is programming with asynchronous data streams\n\n\nWhy\n\n\nFRP \u80fd\u591f\u89e3\u51b3\u7684\u95ee\u9898\n\n\n\n\n\u4ee3\u7801\u91cf\u66f4\u5c11\uff0c\u5c11\u5c31\u610f\u5473\u90fd\u4e0d\u5bb9\u6613\u51fa\u9519\n\n\n\u72b6\u6001\u66f4\u5bb9\u6613\u63a7\u5236\n\n\n\u4ee3\u7801\u66f4\u96c6\u4e2d\n\n\n\u80fd\u591f\u964d\u4f4e mutable state \u968f\u7740\u65f6\u95f4\u53d8\u5316\u6240\u5e26\u6765\u7684\u590d\u6742\u5ea6\n\n\n\n\n\u7f3a\u70b9\n\n\n\u4e0a\u624b\u96be\u5ea6\u5927\n\n\n\u770b\u4e86\u4e00\u5806\u7684\u6559\u7a0b\uff0c\n\n\nHow\n\n\nBasic Examples\n\n\nThree Basic Concept\n\n\nStream\n\n\nTransform\n\n\nBinding\n\n\nExamples\n\n\nViewModels in Action",
             "title": "FRP in Swift"
         },
         {
@@ -36,9 +36,14 @@
             "title": "Definition"
         },
         {
-            "location": "/swift/frp-in-swift/#what",
-            "text": "",
-            "title": "What"
+            "location": "/swift/frp-in-swift/#what-is-functional-programming",
+            "text": "First-class and higher-order functions  Pure functions",
+            "title": "What is Functional Programming?"
+        },
+        {
+            "location": "/swift/frp-in-swift/#what-is-reactive-programming",
+            "text": "Reactive programming is programming with asynchronous data streams",
+            "title": "What is Reactive Programming?"
         },
         {
             "location": "/swift/frp-in-swift/#why",
@@ -46,14 +51,19 @@
             "title": "Why"
         },
         {
-            "location": "/swift/frp-in-swift/#benefit",
-            "text": "",
-            "title": "Benefit"
+            "location": "/swift/frp-in-swift/#frp",
+            "text": "\u4ee3\u7801\u91cf\u66f4\u5c11\uff0c\u5c11\u5c31\u610f\u5473\u90fd\u4e0d\u5bb9\u6613\u51fa\u9519  \u72b6\u6001\u66f4\u5bb9\u6613\u63a7\u5236  \u4ee3\u7801\u66f4\u96c6\u4e2d  \u80fd\u591f\u964d\u4f4e mutable state \u968f\u7740\u65f6\u95f4\u53d8\u5316\u6240\u5e26\u6765\u7684\u590d\u6742\u5ea6",
+            "title": "FRP \u80fd\u591f\u89e3\u51b3\u7684\u95ee\u9898"
         },
         {
-            "location": "/swift/frp-in-swift/#side-effect",
+            "location": "/swift/frp-in-swift/#_1",
             "text": "",
-            "title": "Side effect"
+            "title": "\u7f3a\u70b9"
+        },
+        {
+            "location": "/swift/frp-in-swift/#_2",
+            "text": "\u770b\u4e86\u4e00\u5806\u7684\u6559\u7a0b\uff0c",
+            "title": "\u4e0a\u624b\u96be\u5ea6\u5927"
         },
         {
             "location": "/swift/frp-in-swift/#how",
@@ -94,6 +104,21 @@
             "location": "/swift/frp-in-swift/#viewmodels-in-action",
             "text": "",
             "title": "ViewModels in Action"
+        },
+        {
+            "location": "/swift/memory-management/",
+            "text": "Swift \u4e2d\u7684\u5185\u5b58\u7ba1\u7406\n\n\n\u5230\u5e95\u4f7f\u7528 \nweak\n \u8fd8\u662f \nunowned\n\uff1f\n\n\n\u5148\u629b\u51fa\u7ed3\u8bba\uff0c\u5728\u4f60\u4e0d\u7406\u89e3\u5230\u5e95\u8be5\u7528\u54ea\u4e2a\u7684\u65f6\u5019\uff0c\u7528 \nweak\n \u662f\u6700\u7a33\u59a5\u7684\u884c\u4e3a\u3002\n\n\n\u6839\u636e Apple \u7684\n\u6587\u6863\n\uff0c\n\n\n\n\nUse an unowned reference only when you are sure that the reference always refers to an instance that has not been deallocated.\n\n\nIf you try to access the value of an unowned reference after that instance has been deallocated, you\u2019ll get a runtime error.\n\n\n\n\n\u4e5f\u5c31\u662f\u8bf4\uff0c\u4e3a\u4e86\u9632\u6b62\u5f15\u7528\u5faa\u73af\u7684\u51fa\u73b0\uff0c\u5982\u679c\u4f60\u786e\u5b9a\uff0c\u5f53\u524d\u5bf9\u8c61\u5b58\u5728\u7684\u65f6\u5019\uff0c\u4f60\u5f15\u7528\u7684\u5bf9\u8c61\u662f 100% \u5b58\u5728\u7684\uff0c\u90a3\u4e48\u7528 \nunowned\n \u5c31\u53ef\u4ee5\u4e86\u3002\n\n\n\u8fd8\u6709\uff0c\nweak\n \u7684\u53d8\u91cf\u5fc5\u987b\u662f \noptional\n \u7684\u3002\n\n\n\u603b\u4e4b\u597d\u597d\u8bfb\u6587\u6863\u5566",
+            "title": "Memory management"
+        },
+        {
+            "location": "/swift/memory-management/#swift",
+            "text": "",
+            "title": "Swift \u4e2d\u7684\u5185\u5b58\u7ba1\u7406"
+        },
+        {
+            "location": "/swift/memory-management/#weak-unowned",
+            "text": "\u5148\u629b\u51fa\u7ed3\u8bba\uff0c\u5728\u4f60\u4e0d\u7406\u89e3\u5230\u5e95\u8be5\u7528\u54ea\u4e2a\u7684\u65f6\u5019\uff0c\u7528  weak  \u662f\u6700\u7a33\u59a5\u7684\u884c\u4e3a\u3002  \u6839\u636e Apple \u7684 \u6587\u6863 \uff0c   Use an unowned reference only when you are sure that the reference always refers to an instance that has not been deallocated.  If you try to access the value of an unowned reference after that instance has been deallocated, you\u2019ll get a runtime error.   \u4e5f\u5c31\u662f\u8bf4\uff0c\u4e3a\u4e86\u9632\u6b62\u5f15\u7528\u5faa\u73af\u7684\u51fa\u73b0\uff0c\u5982\u679c\u4f60\u786e\u5b9a\uff0c\u5f53\u524d\u5bf9\u8c61\u5b58\u5728\u7684\u65f6\u5019\uff0c\u4f60\u5f15\u7528\u7684\u5bf9\u8c61\u662f 100% \u5b58\u5728\u7684\uff0c\u90a3\u4e48\u7528  unowned  \u5c31\u53ef\u4ee5\u4e86\u3002  \u8fd8\u6709\uff0c weak  \u7684\u53d8\u91cf\u5fc5\u987b\u662f  optional  \u7684\u3002  \u603b\u4e4b\u597d\u597d\u8bfb\u6587\u6863\u5566",
+            "title": "\u5230\u5e95\u4f7f\u7528 weak \u8fd8\u662f unowned\uff1f"
         }
     ]
 }
