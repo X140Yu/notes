@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-05-15</lastmod>
+     <lastmod>2017-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,7 +13,13 @@
         
     <url>
      <loc>/swift/reactive-swift/</loc>
-     <lastmod>2017-05-15</lastmod>
+     <lastmod>2017-05-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/swift/frp-in-swift/</loc>
+     <lastmod>2017-05-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

@@ -15,7 +15,7 @@
     
     
       
-        <title>ReactiveSwift - X140Yu's notes</title>
+        <title>FRP in Swift - X140Yu's notes</title>
       
     
     
@@ -76,7 +76,7 @@
                 </span>
               
             
-            ReactiveSwift
+            FRP in Swift
           
         </span>
       </div>
@@ -172,6 +172,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../reactive-swift/" title="ReactiveSwift" class="md-nav__link">
+      ReactiveSwift
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -182,22 +194,151 @@
       
     
     
-    <a href="./" title="ReactiveSwift" class="md-nav__link md-nav__link--active">
-      ReactiveSwift
-    </a>
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        FRP in Swift
+      </label>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../frp-in-swift/" title="FRP in Swift" class="md-nav__link">
+    <a href="./" title="FRP in Swift" class="md-nav__link md-nav__link--active">
       FRP in Swift
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" title="Definition" class="md-nav__link">
+    Definition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what" title="What" class="md-nav__link">
+    What
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why" title="Why" class="md-nav__link">
+    Why
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefit" title="Benefit" class="md-nav__link">
+    Benefit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#side-effect" title="Side effect" class="md-nav__link">
+    Side effect
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how" title="How" class="md-nav__link">
+    How
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-examples" title="Basic Examples" class="md-nav__link">
+    Basic Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-basic-concept" title="Three Basic Concept" class="md-nav__link">
+    Three Basic Concept
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stream" title="Stream" class="md-nav__link">
+    Stream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform" title="Transform" class="md-nav__link">
+    Transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding" title="Binding" class="md-nav__link">
+    Binding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewmodels-in-action" title="ViewModels in Action" class="md-nav__link">
+    ViewModels in Action
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -223,6 +364,134 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" title="Definition" class="md-nav__link">
+    Definition
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what" title="What" class="md-nav__link">
+    What
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why" title="Why" class="md-nav__link">
+    Why
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#benefit" title="Benefit" class="md-nav__link">
+    Benefit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#side-effect" title="Side effect" class="md-nav__link">
+    Side effect
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how" title="How" class="md-nav__link">
+    How
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-examples" title="Basic Examples" class="md-nav__link">
+    Basic Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#three-basic-concept" title="Three Basic Concept" class="md-nav__link">
+    Three Basic Concept
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stream" title="Stream" class="md-nav__link">
+    Stream
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform" title="Transform" class="md-nav__link">
+    Transform
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binding" title="Binding" class="md-nav__link">
+    Binding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewmodels-in-action" title="ViewModels in Action" class="md-nav__link">
+    ViewModels in Action
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -234,7 +503,20 @@
               
                 
                 
-                <h1 id="reactiveswift">ReactiveSwift</h1>
+                <h1 id="functional-reactive-programming-in-swift">Functional Reactive Programming in Swift</h1>
+<h2 id="definition">Definition</h2>
+<h3 id="what">What</h3>
+<h3 id="why">Why</h3>
+<h4 id="benefit">Benefit</h4>
+<h4 id="side-effect">Side effect</h4>
+<h3 id="how">How</h3>
+<h4 id="basic-examples">Basic Examples</h4>
+<h2 id="three-basic-concept">Three Basic Concept</h2>
+<h3 id="stream">Stream</h3>
+<h3 id="transform">Transform</h3>
+<h3 id="binding">Binding</h3>
+<h2 id="examples">Examples</h2>
+<h3 id="viewmodels-in-action">ViewModels in Action</h3>
                 
                   
                 
@@ -253,7 +535,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../reactive-swift/" title="ReactiveSwift" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -262,25 +544,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                ReactiveSwift
               </span>
             </div>
           </a>
         
-        
-          <a href="../frp-in-swift/" title="FRP in Swift" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                FRP in Swift
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

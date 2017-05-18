@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome!\n\n\nHi, these are notes written by X140Yu.\n\n\nSite's \nRepository\n\n\nMy \nBlog\n\n\nThis site's articles are all under \nCC Attribution-ShareAlike 4.0 International\n Licence.",
+            "text": "Welcome!\n\n\nHi, these are notes written by X140Yu.\n\n\nSite's \nRepository\n\n\nMy \nBlog\n\n\nThis site's articles are all under \nCC Attribution-ShareAlike 4.0 International\n Licence.\n\n\n# run in local server\nmkdocs serve",
             "title": "Home"
         },
         {
             "location": "/#welcome",
-            "text": "Hi, these are notes written by X140Yu.  Site's  Repository  My  Blog  This site's articles are all under  CC Attribution-ShareAlike 4.0 International  Licence.",
+            "text": "Hi, these are notes written by X140Yu.  Site's  Repository  My  Blog  This site's articles are all under  CC Attribution-ShareAlike 4.0 International  Licence.  # run in local server\nmkdocs serve",
             "title": "Welcome!"
         },
         {
@@ -19,6 +19,81 @@
             "location": "/swift/reactive-swift/#reactiveswift",
             "text": "",
             "title": "ReactiveSwift"
+        },
+        {
+            "location": "/swift/frp-in-swift/",
+            "text": "Functional Reactive Programming in Swift\n\n\nDefinition\n\n\nWhat\n\n\nWhy\n\n\nBenefit\n\n\nSide effect\n\n\nHow\n\n\nBasic Examples\n\n\nThree Basic Concept\n\n\nStream\n\n\nTransform\n\n\nBinding\n\n\nExamples\n\n\nViewModels in Action",
+            "title": "FRP in Swift"
+        },
+        {
+            "location": "/swift/frp-in-swift/#functional-reactive-programming-in-swift",
+            "text": "",
+            "title": "Functional Reactive Programming in Swift"
+        },
+        {
+            "location": "/swift/frp-in-swift/#definition",
+            "text": "",
+            "title": "Definition"
+        },
+        {
+            "location": "/swift/frp-in-swift/#what",
+            "text": "",
+            "title": "What"
+        },
+        {
+            "location": "/swift/frp-in-swift/#why",
+            "text": "",
+            "title": "Why"
+        },
+        {
+            "location": "/swift/frp-in-swift/#benefit",
+            "text": "",
+            "title": "Benefit"
+        },
+        {
+            "location": "/swift/frp-in-swift/#side-effect",
+            "text": "",
+            "title": "Side effect"
+        },
+        {
+            "location": "/swift/frp-in-swift/#how",
+            "text": "",
+            "title": "How"
+        },
+        {
+            "location": "/swift/frp-in-swift/#basic-examples",
+            "text": "",
+            "title": "Basic Examples"
+        },
+        {
+            "location": "/swift/frp-in-swift/#three-basic-concept",
+            "text": "",
+            "title": "Three Basic Concept"
+        },
+        {
+            "location": "/swift/frp-in-swift/#stream",
+            "text": "",
+            "title": "Stream"
+        },
+        {
+            "location": "/swift/frp-in-swift/#transform",
+            "text": "",
+            "title": "Transform"
+        },
+        {
+            "location": "/swift/frp-in-swift/#binding",
+            "text": "",
+            "title": "Binding"
+        },
+        {
+            "location": "/swift/frp-in-swift/#examples",
+            "text": "",
+            "title": "Examples"
+        },
+        {
+            "location": "/swift/frp-in-swift/#viewmodels-in-action",
+            "text": "",
+            "title": "ViewModels in Action"
         }
     ]
 }
