@@ -5,7 +5,11 @@
 - First-class and higher-order functions
 - Pure functions
 ### What is Reactive Programming?
-Reactive programming is programming with asynchronous data streams
+- asynchronous data streams
+### Functional + Reactive
+- Streams
+- Transform
+- 
 
 ### Why
 #### FRP 能够解决的问题
