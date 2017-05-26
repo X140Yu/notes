@@ -2,28 +2,18 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome!\n\n\nHi, these are notes written by X140Yu.\n\n\nSite's \nRepository\n\n\nMy \nBlog\n\n\nThis site's articles are all under \nCC Attribution-ShareAlike 4.0 International\n Licence.\n\n\n# run in local server\nmkdocs serve\n# deploy to github pages\nmkdocs gh-deploy",
+            "text": "Welcome!\n\n\nHi, these are notes written by X140Yu.\n\n\nSite's \nRepository\n\n\nMy \nBlog\n\n\nThis site's articles are all under \nCC Attribution-ShareAlike 4.0 International\n Licence.\n\n\n1\n2\n3\n4\n# run in local server\n\nmkdocs serve\n\n# deploy to github pages\n\nmkdocs gh-deploy",
             "title": "Home"
         },
         {
             "location": "/#welcome",
-            "text": "Hi, these are notes written by X140Yu.  Site's  Repository  My  Blog  This site's articles are all under  CC Attribution-ShareAlike 4.0 International  Licence.  # run in local server\nmkdocs serve\n# deploy to github pages\nmkdocs gh-deploy",
+            "text": "Hi, these are notes written by X140Yu.  Site's  Repository  My  Blog  This site's articles are all under  CC Attribution-ShareAlike 4.0 International  Licence.  1\n2\n3\n4 # run in local server \nmkdocs serve # deploy to github pages \nmkdocs gh-deploy",
             "title": "Welcome!"
         },
         {
-            "location": "/swift/reactive-swift/",
-            "text": "ReactiveSwift",
-            "title": "ReactiveSwift"
-        },
-        {
-            "location": "/swift/reactive-swift/#reactiveswift",
-            "text": "",
-            "title": "ReactiveSwift"
-        },
-        {
             "location": "/swift/frp-in-swift/",
-            "text": "Functional Reactive Programming in Swift\n\n\nDefinition\n\n\nWhat is Functional Programming?\n\n\n\n\nFirst-class and higher-order functions\n\n\nPure functions\n\n\n\n\nWhat is Reactive Programming?\n\n\n\n\nasynchronous data streams\n\n\n\n\nFunctional + Reactive\n\n\n\n\nStreams\n\n\nTransform\n\n\n\n\n\n\nWhy\n\n\nFRP \u80fd\u591f\u89e3\u51b3\u7684\u95ee\u9898\n\n\n\n\n\u4ee3\u7801\u91cf\u66f4\u5c11\uff0c\u5c11\u5c31\u610f\u5473\u90fd\u4e0d\u5bb9\u6613\u51fa\u9519\n\n\n\u72b6\u6001\u66f4\u5bb9\u6613\u63a7\u5236\n\n\n\u4ee3\u7801\u66f4\u96c6\u4e2d\n\n\n\u80fd\u591f\u964d\u4f4e mutable state \u968f\u7740\u65f6\u95f4\u53d8\u5316\u6240\u5e26\u6765\u7684\u590d\u6742\u5ea6\n\n\n\n\n\u7f3a\u70b9\n\n\n\u4e0a\u624b\u96be\u5ea6\u5927\n\n\n\u770b\u4e86\u4e00\u5806\u7684\u6559\u7a0b\uff0c\n\n\nHow\n\n\nBasic Examples\n\n\nThree Basic Concept\n\n\nStream\n\n\nTransform\n\n\nBinding\n\n\nExamples\n\n\nViewModels in Action",
-            "title": "FRP in Swift"
+            "text": "Functional Reactive Programming in Swift\n\n\nWhat?\n\n\nFunctional Programming\n\n\nFirst-class function\n\n\nTreats functions as first-class citizens\n\n\nHigher-order function\n\n\nA function that does at least one of the following:\n\n\n\n\ntakes one or more functions as arguments \n\n\nreturns a function as its result\n\n\n\n\nPure function\n\n\nFunction which has no side-effects\n\n\nExample\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n// pure function\n\n\nfunc\n \naddTen\n(\n_\n \na\n:\n \nInt\n)\n \n->\n \nInt\n \n{\n\n    \nreturn\n \na\n \n+\n \n10\n\n\n}\n\n\n\n// higher order function\n\n\nfunc\n \ntwice\n(\n_\n \nf\n:\n \n@\nescaping\n \n(\nInt\n)\n \n->\n \n(\nInt\n))\n \n->\n \n(\nInt\n)\n \n->\n \n(\nInt\n)\n \n{\n\n    \nreturn\n \n{\n\n        \nf\n(\nf\n(\n$0\n))\n\n    \n}\n\n\n}\n\n\n\n// first-class citizen\n\n\nlet\n \naddTenTwice\n \n=\n \ntwice\n(\naddTen\n)\n\n\naddTenTwice\n(\n10\n)\n \n//30\n\n\nlet\n \naddTenFourTimes\n \n=\n \ntwice\n(\naddTenTwice\n)\n\n\naddTenFourTimes\n(\n10\n)\n \n//50\n\n\n\n\n// a little more harder\n\n\nfunc\n \nmultiplyBySelf\n(\n_\n \na\n:\n \nInt\n)\n \n->\n \nInt\n \n{\n\n    \nreturn\n \na\n \n*\n \na\n\n\n}\n\n\n\nlet\n \ng\n \n=\n \ntwice\n(\nmultiplyBySelf\n)\n\n\ng\n(\n3\n)\n \n// 81\n\n\ntwice\n(\ng\n)(\n3\n)\n \n// 43046721\n\n\n\nlet\n \na\n \n=\n \n3\n \n*\n \n3\n \n//9\n\n\nlet\n \nb\n \n=\n \na\n \n*\n \na\n \n//81\n\n\nlet\n \nc\n \n=\n \nb\n \n*\n \nb\n \n//6561\n\n\nlet\n \nd\n \n=\n \nc\n \n*\n \nc\n \n//43046721\n\n\n\n\n\n\n\nReactive Programming\n\n\nAsynchronous Data Streams\n\n\n1\n--a---b-c---d---X---|->\n\n\n\n\n\n\n\n\nA stream is a sequence of ongoing events ordered in time\n\n\nEverything can be a stream\n\n\ntouch event\n\n\nKVO\n\n\nNotification\n\n\ncallback\n\n\nNetwork response\n\n\ntimer\n\n\n...\n\n\n\n\n\n\n\n\nFunctional + Reactive\n\n\nStream\n\n\n\n\nLike an Array, it can hold anything\n\n\nUnlike an Array, you can't access it anytime you want, instread, you get notified when it's value get changed\n\n\nLike a pipe, if you missed the thing through it, it's gone forever\n\n\n\n\nTransformation\n\n\n\n\nChange a stream to another stream, just like change a sequence to another\n\n\nHigher-order functions, map, filter, reduce, flatMap, etc\n\n\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\nlet\n \nreviewers\n \n=\n \n[\n\"kimi\"\n,\n \n\"qfu\"\n,\n \n\"dhc\"\n,\n \n\"x\"\n,\n \n\"gaoji\"\n]\n\n\n\n// implement our own trnasformation functions\n\n\nextension\n \nArray\n \n{\n\n    \nfunc\n \nxy_map\n<\nT\n>(\n_\n \ntransform\n:\n \n(\nElement\n)\n \n->\n \nT\n)\n \n->\n \n[\nT\n]\n \n{\n\n        \nvar\n \nresult\n:\n \n[\nT\n]\n \n=\n \n[]\n\n\n        \nfor\n \ni\n \nin\n \nself\n \n{\n\n            \nresult\n.\nappend\n(\ntransform\n(\ni\n))\n\n        \n}\n\n\n        \nreturn\n \nresult\n\n    \n}\n\n\n    \nfunc\n \nxy_filter\n(\n_\n \ncondition\n:\n \n(\nElement\n)\n \n->\n \nBool\n)\n \n->\n \n[\nElement\n]\n \n{\n\n        \nvar\n \nresult\n:\n \n[\nElement\n]\n \n=\n \n[]\n\n        \nfor\n \ni\n \nin\n \nself\n \n{\n\n            \nif\n \ncondition\n(\ni\n)\n \n{\n\n                \nresult\n.\nappend\n(\ni\n)\n\n            \n}\n\n        \n}\n\n        \nreturn\n \nresult\n\n    \n}\n\n\n    \nfunc\n \nxy_reduce\n<\nT\n>(\n_\n \ninitialValue\n:\n \nT\n,\n \n_\n \ncombine\n:\n \n(\nT\n,\n \nElement\n)\n \n->\n \nT\n)\n \n->\n \nT\n \n{\n\n        \nvar\n \nvalue\n \n=\n \ninitialValue\n\n\n        \nfor\n \ni\n \nin\n \nself\n \n{\n\n            \nvalue\n \n=\n \ncombine\n(\nvalue\n,\n \ni\n)\n\n        \n}\n\n\n        \nreturn\n \nvalue\n\n    \n}\n\n\n}\n\n\n\nreviewers\n.\nxy_map\n \n{\n\n    \n$0\n.\nuppercased\n()\n\n\n}\n\n\n\nreviewers\n.\nxy_filter\n \n{\n\n    \n$0\n.\ncharacters\n.\ncount\n \n>\n \n3\n\n\n}\n\n\n\n// chain transformations\n\n\nreviewers\n\n    \n.\nxy_filter\n \n{\n \n$0\n.\ncharacters\n.\ncount\n \n>\n \n3\n \n}\n\n    \n.\nxy_reduce\n(\n\"\"\n)\n \n{\n \nreturn\n \n$0\n \n+\n \n\"\n\\(\n$1\n)\n review my code please~\n\\n\n\"\n \n}\n\n\n\n// the original value hasn't been changed\n\n\nreviewers\n\n\n\n// a little bit about flatMap\n\n\nlet\n \nxxs\n \n=\n \n[[\n1\n,\n \n2\n],\n \n[\n3\n,\n \n4\n],\n \n[\n5\n,\n \n6\n]]\n\n\nlet\n \nxso\n \n=\n \n[\n1\n,\n \n2\n,\n \n3\n,\n \nnil\n,\n \n5\n]\n\n\n// flatMap has 2 signature\n\n\nxxs\n.\nflatMap\n \n{\n \narr\n \nin\n\n    \narr\n.\nmap\n \n{\n$0\n}\n\n\n}\n \n// [1, 2, 3, 4, 5, 6]\n\n\nxso\n.\nflatMap\n \n{\n\n    \n$0\n\n\n}\n \n// [1, 2, 3, 5]\n\n\n\n\n\n\n\nBinding\n\n\nBinding makes program more reactive\n\n\nin Swift!\n\n\n\n\nFunctional language\n\n\nCompiler & strong typed\n\n\n\n\nFunctional + Reactive + Swift, write awesome program!\n\n\nWhy\n\n\nGood\n\n\n\n\nImprove productivity\n\n\nLess and more centralised code\n\n\nEasy to maintain\n\n\nAvoid complexity with mutable state growing over time\n\n\nChange the way you think when coding\n\n\n\n\nBad\n\n\n\n\nLearning curve is steep, but not that steep\n\n\nHard to debug\n\n\n\n\nThe benefits it brings are worth we give it a try\n\n\nHow\n\n\nUnserstand the basic reactive unit\n\n\nObservable\n\n\nIt send messages\n\n\nSubscriber\n\n\nIt consume messages\n\n\nObservables are like \nSequence\n,\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n// Observables are like Sequence\n\n\nlet\n \nxs\n \n=\n \n[\n1\n,\n \n2\n,\n \n3\n,\n \n4\n,\n \n5\n]\n\n\n\n// iterate a sequence\n\n\nfor\n \nx\n \nin\n \nxs\n \n{\n\n    \nprint\n(\nx\n)\n\n\n}\n\n\n\n// the operation above equals\n\n\nvar\n \nxsIte\n \n=\n \nxs\n.\nmakeIterator\n()\n\n\nwhile\n \nlet\n \nx\n \n=\n \nxsIte\n.\nnext\n()\n \n{\n\n    \nprint\n(\nx\n)\n\n\n}\n\n\n\n// we can use Sequence feature to make a CountDown\n\n\nstruct\n \nCountDown\n:\n \nSequence\n,\n \nIteratorProtocol\n \n{\n\n    \nvar\n \nnum\n:\n \nInt\n\n\n    \nvar\n \nnotify\n:\n \n(\nInt\n?)\n \n->\n \n()\n\n\n    \nmutating\n \nfunc\n \nnext\n()\n \n->\n \nInt\n?\n \n{\n\n        \nnotify\n(\nnum\n)\n\n        \nif\n \nnum\n \n==\n \n0\n \n{\n\n            \nreturn\n \nnil\n\n        \n}\n\n\n        \ndefer\n \n{\n\n            \nnum\n \n-=\n \n1\n\n        \n}\n\n        \nreturn\n \nnum\n\n    \n}\n\n\n}\n\n\n\nvar\n \nite\n \n=\n \nCountDown\n(\nnum\n:\n \n10\n)\n \n{\n\n        \n// as a subscriber, we are consuming messages\n\n        \nprint\n(\n$0\n)\n\n    \n}.\nmakeIterator\n()\n\n\n\n// now it's kind like a stream\n\n\n// once next() called, it'll print the latest value, it's reactive now\n\n\nite\n.\nnext\n()\n \n//10\n\n\nite\n.\nnext\n()\n \n//9\n\n\nite\n.\nnext\n()\n \n//8\n\n\n\n\n\n\n\nHow can we make our own Observable/Subscriber pattern?\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\nimport\n \nFoundation\n\n\nimport\n \nUIKit\n\n\n\nclass\n \nKeyValueObserver\n<\nA\n>:\n \nNSObject\n \n{\n\n    \nlet\n \nblock\n:\n \n(\nA\n)\n \n->\n \n()\n\n    \nlet\n \nkeyPath\n:\n \nString\n\n    \nlet\n \nobject\n:\n \nNSObject\n\n    \ninit\n(\nobject\n:\n \nNSObject\n,\n \nkeyPath\n:\n \nString\n,\n \n_\n \nblock\n:\n \n@\nescaping\n \n(\nA\n)\n \n->\n \n())\n \n{\n\n        \nself\n.\nblock\n \n=\n \nblock\n\n        \nself\n.\nkeyPath\n \n=\n \nkeyPath\n\n        \nself\n.\nobject\n \n=\n \nobject\n\n        \nsuper\n.\ninit\n()\n\n        \nobject\n.\naddObserver\n(\nself\n,\n \nforKeyPath\n:\n \nkeyPath\n,\n \noptions\n:\n \n.\nnew\n,\n \ncontext\n:\n \nnil\n)\n\n    \n}\n\n\n    \ndeinit\n \n{\n\n        \nprint\n(\n\"deinit\"\n)\n\n        \nobject\n.\nremoveObserver\n(\nself\n,\n \nforKeyPath\n:\n \nkeyPath\n)\n\n    \n}\n\n\n    \noverride\n \nfunc\n \nobserveValue\n(\nforKeyPath\n \nkeyPath\n:\n \nString\n?,\n \nof\n \nobject\n:\n \nAny\n?,\n \nchange\n:\n \n[\nNSKeyValueChangeKey\n \n:\n \nAny\n]?,\n \ncontext\n:\n \nUnsafeMutableRawPointer\n?)\n \n{\n\n        \nblock\n(\nchange\n![.\nnewKey\n]\n \nas\n!\n \nA\n)\n\n    \n}\n\n\n}\n\n\n\nclass\n \nObservable\n<\nA\n>\n \n{\n\n    \nprivate\n \nvar\n \ncallbacks\n:\n \n[(\nA\n)\n \n->\n \n()]\n \n=\n \n[]\n\n    \nvar\n \nobjects\n:\n \n[\nAny\n]\n \n=\n \n[]\n\n\n    \nstatic\n \nfunc\n \npipe\n()\n \n->\n \n((\nA\n)\n \n->\n \n(),\n \nObservable\n<\nA\n>)\n \n{\n\n        \nlet\n \nobservable\n \n=\n \nObservable\n<\nA\n>()\n\n        \nreturn\n \n({\n \n[\nweak\n \nobservable\n]\n \nvalue\n \nin\n\n            \nobservable\n?.\nsend\n(\nvalue\n)},\n \nobservable\n\n        \n)\n\n    \n}\n\n\n    \nprivate\n \nfunc\n \nsend\n(\n_\n \nvalue\n:\n \nA\n)\n \n{\n\n        \nfor\n \ncallback\n \nin\n \ncallbacks\n \n{\n\n            \ncallback\n(\nvalue\n)\n\n        \n}\n\n    \n}\n\n\n    \nfunc\n \nsubscribe\n(\ncallback\n:\n \n@\nescaping\n \n(\nA\n)\n \n->\n \n())\n \n{\n\n        \ncallbacks\n.\nappend\n(\ncallback\n)\n\n    \n}\n\n\n}\n\n\n\nextension\n \nUITextField\n \n{\n\n    \nfunc\n \nobservable\n()\n \n->\n \nObservable\n<\nString\n>\n \n{\n\n        \nlet\n \n(\nsink\n,\n \nobservable\n)\n \n=\n \nObservable\n<\nString\n>.\npipe\n()\n\n        \nlet\n \nobserver\n \n=\n \nKeyValueObserver\n(\nobject\n:\n \nself\n,\n \nkeyPath\n:\n \n#\nkeyPath\n(\ntext\n))\n \n{\n\n            \nsink\n(\n$0\n)\n\n        \n}\n\n        \nobservable\n.\nobjects\n.\nappend\n(\nobserver\n)\n\n        \nreturn\n \nobservable\n\n    \n}\n\n\n}\n\n\n\nvar\n \ntextField\n:\n \nUITextField\n?\n \n=\n \nUITextField\n()\n\n\n\ntextField\n?.\ntext\n \n=\n \n\"asd\"\n\n\nvar\n \nobservable\n \n=\n \ntextField\n?.\nobservable\n()\n\n\n\nobservable\n!.\nsubscribe\n \n{\n\n    \nprint\n(\n$0\n)\n\n\n}\n\n\n\ntextField\n?.\ntext\n \n=\n \n\"asdjlas\"\n\n\ntextField\n?.\ntext\n \n=\n \n\"asdjk\"\n\n\ntextField\n \n=\n \nnil\n\n\nobservable\n \n=\n \nnil\n\n\n\n\n\n\n\nIntegrate a reactive programming library\n\n\n\n\nReactiveSwift\n\n\nReactiveKit\n\n\nRxSwift\n\n\n\n\nNeither can goes wrong, but I prefer RxSwift because,\n\n\n\n\nIt's a \nReactiveX\n official Swift implementation which means\n\n\nDeveloper won't give it up (Maybe?)\n\n\nYou can easily switch to other platform\n\n\n\n\n\n\nIt has a greate \ncommunity\n\n\n\n\nCredits\n\n\n\n\nwiki/Higher-order function\n\n\nFunctional Reactive Awesomeness with Swift\n\n\nThe introduction to Reactive Programming you've been missing",
+            "title": "FRP basics"
         },
         {
             "location": "/swift/frp-in-swift/#functional-reactive-programming-in-swift",
@@ -31,24 +21,69 @@
             "title": "Functional Reactive Programming in Swift"
         },
         {
-            "location": "/swift/frp-in-swift/#definition",
+            "location": "/swift/frp-in-swift/#what",
             "text": "",
-            "title": "Definition"
+            "title": "What?"
         },
         {
-            "location": "/swift/frp-in-swift/#what-is-functional-programming",
-            "text": "First-class and higher-order functions  Pure functions",
-            "title": "What is Functional Programming?"
+            "location": "/swift/frp-in-swift/#functional-programming",
+            "text": "",
+            "title": "Functional Programming"
         },
         {
-            "location": "/swift/frp-in-swift/#what-is-reactive-programming",
-            "text": "asynchronous data streams",
-            "title": "What is Reactive Programming?"
+            "location": "/swift/frp-in-swift/#first-class-function",
+            "text": "Treats functions as first-class citizens",
+            "title": "First-class function"
+        },
+        {
+            "location": "/swift/frp-in-swift/#higher-order-function",
+            "text": "A function that does at least one of the following:   takes one or more functions as arguments   returns a function as its result",
+            "title": "Higher-order function"
+        },
+        {
+            "location": "/swift/frp-in-swift/#pure-function",
+            "text": "Function which has no side-effects",
+            "title": "Pure function"
+        },
+        {
+            "location": "/swift/frp-in-swift/#example",
+            "text": "1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32 // pure function  func   addTen ( _   a :   Int )   ->   Int   { \n     return   a   +   10  }  // higher order function  func   twice ( _   f :   @ escaping   ( Int )   ->   ( Int ))   ->   ( Int )   ->   ( Int )   { \n     return   { \n         f ( f ( $0 )) \n     }  }  // first-class citizen  let   addTenTwice   =   twice ( addTen )  addTenTwice ( 10 )   //30  let   addTenFourTimes   =   twice ( addTenTwice )  addTenFourTimes ( 10 )   //50  // a little more harder  func   multiplyBySelf ( _   a :   Int )   ->   Int   { \n     return   a   *   a  }  let   g   =   twice ( multiplyBySelf )  g ( 3 )   // 81  twice ( g )( 3 )   // 43046721  let   a   =   3   *   3   //9  let   b   =   a   *   a   //81  let   c   =   b   *   b   //6561  let   d   =   c   *   c   //43046721",
+            "title": "Example"
+        },
+        {
+            "location": "/swift/frp-in-swift/#reactive-programming",
+            "text": "",
+            "title": "Reactive Programming"
+        },
+        {
+            "location": "/swift/frp-in-swift/#asynchronous-data-streams",
+            "text": "1 --a---b-c---d---X---|->    A stream is a sequence of ongoing events ordered in time  Everything can be a stream  touch event  KVO  Notification  callback  Network response  timer  ...",
+            "title": "Asynchronous Data Streams"
         },
         {
             "location": "/swift/frp-in-swift/#functional-reactive",
-            "text": "Streams  Transform",
+            "text": "",
             "title": "Functional + Reactive"
+        },
+        {
+            "location": "/swift/frp-in-swift/#stream",
+            "text": "Like an Array, it can hold anything  Unlike an Array, you can't access it anytime you want, instread, you get notified when it's value get changed  Like a pipe, if you missed the thing through it, it's gone forever",
+            "title": "Stream"
+        },
+        {
+            "location": "/swift/frp-in-swift/#transformation",
+            "text": "Change a stream to another stream, just like change a sequence to another  Higher-order functions, map, filter, reduce, flatMap, etc    1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61 let   reviewers   =   [ \"kimi\" ,   \"qfu\" ,   \"dhc\" ,   \"x\" ,   \"gaoji\" ]  // implement our own trnasformation functions  extension   Array   { \n     func   xy_map < T >( _   transform :   ( Element )   ->   T )   ->   [ T ]   { \n         var   result :   [ T ]   =   [] \n\n         for   i   in   self   { \n             result . append ( transform ( i )) \n         } \n\n         return   result \n     } \n\n     func   xy_filter ( _   condition :   ( Element )   ->   Bool )   ->   [ Element ]   { \n         var   result :   [ Element ]   =   [] \n         for   i   in   self   { \n             if   condition ( i )   { \n                 result . append ( i ) \n             } \n         } \n         return   result \n     } \n\n     func   xy_reduce < T >( _   initialValue :   T ,   _   combine :   ( T ,   Element )   ->   T )   ->   T   { \n         var   value   =   initialValue \n\n         for   i   in   self   { \n             value   =   combine ( value ,   i ) \n         } \n\n         return   value \n     }  }  reviewers . xy_map   { \n     $0 . uppercased ()  }  reviewers . xy_filter   { \n     $0 . characters . count   >   3  }  // chain transformations  reviewers \n     . xy_filter   {   $0 . characters . count   >   3   } \n     . xy_reduce ( \"\" )   {   return   $0   +   \" \\( $1 )  review my code please~ \\n \"   }  // the original value hasn't been changed  reviewers  // a little bit about flatMap  let   xxs   =   [[ 1 ,   2 ],   [ 3 ,   4 ],   [ 5 ,   6 ]]  let   xso   =   [ 1 ,   2 ,   3 ,   nil ,   5 ]  // flatMap has 2 signature  xxs . flatMap   {   arr   in \n     arr . map   { $0 }  }   // [1, 2, 3, 4, 5, 6]  xso . flatMap   { \n     $0  }   // [1, 2, 3, 5]",
+            "title": "Transformation"
+        },
+        {
+            "location": "/swift/frp-in-swift/#binding",
+            "text": "Binding makes program more reactive",
+            "title": "Binding"
+        },
+        {
+            "location": "/swift/frp-in-swift/#in-swift",
+            "text": "Functional language  Compiler & strong typed   Functional + Reactive + Swift, write awesome program!",
+            "title": "in Swift!"
         },
         {
             "location": "/swift/frp-in-swift/#why",
@@ -56,19 +91,14 @@
             "title": "Why"
         },
         {
-            "location": "/swift/frp-in-swift/#frp",
-            "text": "\u4ee3\u7801\u91cf\u66f4\u5c11\uff0c\u5c11\u5c31\u610f\u5473\u90fd\u4e0d\u5bb9\u6613\u51fa\u9519  \u72b6\u6001\u66f4\u5bb9\u6613\u63a7\u5236  \u4ee3\u7801\u66f4\u96c6\u4e2d  \u80fd\u591f\u964d\u4f4e mutable state \u968f\u7740\u65f6\u95f4\u53d8\u5316\u6240\u5e26\u6765\u7684\u590d\u6742\u5ea6",
-            "title": "FRP \u80fd\u591f\u89e3\u51b3\u7684\u95ee\u9898"
+            "location": "/swift/frp-in-swift/#good",
+            "text": "Improve productivity  Less and more centralised code  Easy to maintain  Avoid complexity with mutable state growing over time  Change the way you think when coding",
+            "title": "Good"
         },
         {
-            "location": "/swift/frp-in-swift/#_1",
-            "text": "",
-            "title": "\u7f3a\u70b9"
-        },
-        {
-            "location": "/swift/frp-in-swift/#_2",
-            "text": "\u770b\u4e86\u4e00\u5806\u7684\u6559\u7a0b\uff0c",
-            "title": "\u4e0a\u624b\u96be\u5ea6\u5927"
+            "location": "/swift/frp-in-swift/#bad",
+            "text": "Learning curve is steep, but not that steep  Hard to debug   The benefits it brings are worth we give it a try",
+            "title": "Bad"
         },
         {
             "location": "/swift/frp-in-swift/#how",
@@ -76,39 +106,39 @@
             "title": "How"
         },
         {
-            "location": "/swift/frp-in-swift/#basic-examples",
+            "location": "/swift/frp-in-swift/#unserstand-the-basic-reactive-unit",
             "text": "",
-            "title": "Basic Examples"
+            "title": "Unserstand the basic reactive unit"
         },
         {
-            "location": "/swift/frp-in-swift/#three-basic-concept",
-            "text": "",
-            "title": "Three Basic Concept"
+            "location": "/swift/frp-in-swift/#observable",
+            "text": "It send messages",
+            "title": "Observable"
         },
         {
-            "location": "/swift/frp-in-swift/#stream",
-            "text": "",
-            "title": "Stream"
+            "location": "/swift/frp-in-swift/#subscriber",
+            "text": "It consume messages  Observables are like  Sequence ,   1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43 // Observables are like Sequence  let   xs   =   [ 1 ,   2 ,   3 ,   4 ,   5 ]  // iterate a sequence  for   x   in   xs   { \n     print ( x )  }  // the operation above equals  var   xsIte   =   xs . makeIterator ()  while   let   x   =   xsIte . next ()   { \n     print ( x )  }  // we can use Sequence feature to make a CountDown  struct   CountDown :   Sequence ,   IteratorProtocol   { \n     var   num :   Int \n\n     var   notify :   ( Int ?)   ->   () \n\n     mutating   func   next ()   ->   Int ?   { \n         notify ( num ) \n         if   num   ==   0   { \n             return   nil \n         } \n\n         defer   { \n             num   -=   1 \n         } \n         return   num \n     }  }  var   ite   =   CountDown ( num :   10 )   { \n         // as a subscriber, we are consuming messages \n         print ( $0 ) \n     }. makeIterator ()  // now it's kind like a stream  // once next() called, it'll print the latest value, it's reactive now  ite . next ()   //10  ite . next ()   //9  ite . next ()   //8    How can we make our own Observable/Subscriber pattern?   1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71 import   Foundation  import   UIKit  class   KeyValueObserver < A >:   NSObject   { \n     let   block :   ( A )   ->   () \n     let   keyPath :   String \n     let   object :   NSObject \n     init ( object :   NSObject ,   keyPath :   String ,   _   block :   @ escaping   ( A )   ->   ())   { \n         self . block   =   block \n         self . keyPath   =   keyPath \n         self . object   =   object \n         super . init () \n         object . addObserver ( self ,   forKeyPath :   keyPath ,   options :   . new ,   context :   nil ) \n     } \n\n     deinit   { \n         print ( \"deinit\" ) \n         object . removeObserver ( self ,   forKeyPath :   keyPath ) \n     } \n\n     override   func   observeValue ( forKeyPath   keyPath :   String ?,   of   object :   Any ?,   change :   [ NSKeyValueChangeKey   :   Any ]?,   context :   UnsafeMutableRawPointer ?)   { \n         block ( change ![. newKey ]   as !   A ) \n     }  }  class   Observable < A >   { \n     private   var   callbacks :   [( A )   ->   ()]   =   [] \n     var   objects :   [ Any ]   =   [] \n\n     static   func   pipe ()   ->   (( A )   ->   (),   Observable < A >)   { \n         let   observable   =   Observable < A >() \n         return   ({   [ weak   observable ]   value   in \n             observable ?. send ( value )},   observable \n         ) \n     } \n\n     private   func   send ( _   value :   A )   { \n         for   callback   in   callbacks   { \n             callback ( value ) \n         } \n     } \n\n     func   subscribe ( callback :   @ escaping   ( A )   ->   ())   { \n         callbacks . append ( callback ) \n     }  }  extension   UITextField   { \n     func   observable ()   ->   Observable < String >   { \n         let   ( sink ,   observable )   =   Observable < String >. pipe () \n         let   observer   =   KeyValueObserver ( object :   self ,   keyPath :   # keyPath ( text ))   { \n             sink ( $0 ) \n         } \n         observable . objects . append ( observer ) \n         return   observable \n     }  }  var   textField :   UITextField ?   =   UITextField ()  textField ?. text   =   \"asd\"  var   observable   =   textField ?. observable ()  observable !. subscribe   { \n     print ( $0 )  }  textField ?. text   =   \"asdjlas\"  textField ?. text   =   \"asdjk\"  textField   =   nil  observable   =   nil",
+            "title": "Subscriber"
         },
         {
-            "location": "/swift/frp-in-swift/#transform",
-            "text": "",
-            "title": "Transform"
+            "location": "/swift/frp-in-swift/#integrate-a-reactive-programming-library",
+            "text": "ReactiveSwift  ReactiveKit  RxSwift   Neither can goes wrong, but I prefer RxSwift because,   It's a  ReactiveX  official Swift implementation which means  Developer won't give it up (Maybe?)  You can easily switch to other platform    It has a greate  community",
+            "title": "Integrate a reactive programming library"
         },
         {
-            "location": "/swift/frp-in-swift/#binding",
-            "text": "",
-            "title": "Binding"
+            "location": "/swift/frp-in-swift/#credits",
+            "text": "wiki/Higher-order function  Functional Reactive Awesomeness with Swift  The introduction to Reactive Programming you've been missing",
+            "title": "Credits"
         },
         {
-            "location": "/swift/frp-in-swift/#examples",
-            "text": "",
-            "title": "Examples"
+            "location": "/swift/rxswift/",
+            "text": "RxSwift",
+            "title": "RxSwift"
         },
         {
-            "location": "/swift/frp-in-swift/#viewmodels-in-action",
+            "location": "/swift/rxswift/#rxswift",
             "text": "",
-            "title": "ViewModels in Action"
+            "title": "RxSwift"
         },
         {
             "location": "/swift/memory-management/",
@@ -124,6 +154,36 @@
             "location": "/swift/memory-management/#weak-unowned",
             "text": "\u5148\u629b\u51fa\u7ed3\u8bba\uff0c\u5728\u4f60\u4e0d\u7406\u89e3\u5230\u5e95\u8be5\u7528\u54ea\u4e2a\u7684\u65f6\u5019\uff0c\u7528  weak  \u662f\u6700\u7a33\u59a5\u7684\u884c\u4e3a\u3002  \u6839\u636e Apple \u7684 \u6587\u6863 \uff0c   Use an unowned reference only when you are sure that the reference always refers to an instance that has not been deallocated.  If you try to access the value of an unowned reference after that instance has been deallocated, you\u2019ll get a runtime error.   \u4e5f\u5c31\u662f\u8bf4\uff0c\u4e3a\u4e86\u9632\u6b62\u5f15\u7528\u5faa\u73af\u7684\u51fa\u73b0\uff0c\u5982\u679c\u4f60\u786e\u5b9a\uff0c\u5f53\u524d\u5bf9\u8c61\u5b58\u5728\u7684\u65f6\u5019\uff0c\u4f60\u5f15\u7528\u7684\u5bf9\u8c61\u662f 100% \u5b58\u5728\u7684\uff0c\u90a3\u4e48\u7528  unowned  \u5c31\u53ef\u4ee5\u4e86\u3002  \u8fd8\u6709\uff0c weak  \u7684\u53d8\u91cf\u5fc5\u987b\u662f  optional  \u7684\u3002  \u603b\u4e4b\u597d\u597d\u8bfb\u6587\u6863\u5566",
             "title": "\u5230\u5e95\u4f7f\u7528 weak \u8fd8\u662f unowned\uff1f"
+        },
+        {
+            "location": "/swift/magic-in-swift/",
+            "text": "\u5947\u6280\u6deb\u5de7 in Swift\n\n\nDefer\n\n\ndefer\n \u7684\u6267\u884c\u662f\u5728\u5f53\u524d scrope \u6267\u884c\u4e4b\u540e\n\n\n\u5b89\u5168\u5730\u91ca\u653e\u8d44\u6e90\n\n\n\u6709\u4e86 \ndefer\n \u4ee5\u540e\uff0c\u518d\u4e5f\u4e0d\u6015\u8d44\u6e90\u5fd8\u8bb0\u91ca\u653e\u7684\u95ee\u9898\u4e86\uff01\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\nfunc\n \nresizeImage\n(\nurl\n:\n \nNSURL\n)\n \n->\n \nUIImage\n?\n \n{\n\n    \n// ...\n\n    \nlet\n \ndataSize\n:\n \nInt\n \n=\n \n...\n\n    \nlet\n \ndestData\n \n=\n \nUnsafeMutablePointer\n<\nUInt8\n>.\nalloc\n(\ndataSize\n)\n\n\n    \ndefer\n \n{\n\n\n        \n// \u4e0d\u7ba1\u8fd9\u4e2a\u4e0b\u9762\u8d70\u5230\u54ea\u4e2a\u5206\u652f\uff0c\u53ea\u8981\u5f53\u524d\u51fd\u6570\u6267\u884c\u5b8c\uff0cdestData \u90fd\u4f1a\u88ab\u91ca\u653e\n\n\n        \ndestData\n.\ndealloc\n(\ndataSize\n)\n\n\n    \n}\n\n\n\n    \nvar\n \ndestBuffer\n \n=\n \nvImage_Buffer\n(\ndata\n:\n \ndestData\n,\n \n...)\n\n\n    \n// scale the image from sourceBuffer to destBuffer\n\n    \nvar\n \nerror\n \n=\n \nvImageScale_ARGB8888\n(&\nsourceBuffer\n,\n \n&\ndestBuffer\n,\n \n...)\n\n    \nguard\n \nerror\n \n==\n \nkvImageNoError\n \n        \nelse\n \n{\n \nreturn\n \nnil\n \n}\n\n\n    \n// create a CGImage from the destBuffer\n\n    \nguard\n \nlet\n \ndestCGImage\n \n=\n \nvImageCreateCGImageFromBuffer\n(&\ndestBuffer\n,\n \n&\nformat\n,\n \n...)\n \n        \nelse\n \n{\n \nreturn\n \nnil\n \n}\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\n\u4e00\u4e2a\u5c0f trick\n\n\n\u5b9e\u73b0\u7c7b\u4f3c C \u4e2d\u7684 \nx++\n \u6548\u679c\uff0c\u5de7\u5999\u5730\u5229\u7528\u4e86 \ndefer\n \u7684\u5ef6\u65f6\u7279\u6027\u3002\u4e5f\u5c31\u662f\u5728\u51fd\u6570\u8fd4\u56de\u4e4b\u540e\uff0c\nx\n \u7684\u503c\u624d\u4f1a\u53d1\u751f\u6539\u53d8\u3002\n\n\n1\n2\n3\n4\n5\n6\npostfix\n \nfunc\n \n++\n(\ninout\n \nx\n:\n \nInt\n)\n \n->\n \nInt\n \n{\n\n    \n// fuck temp value\n\n    \nlet\n \ncurrent\n \n=\n \nx\n\n    \nx\n \n+=\n \n1\n\n    \nreturn\n \ncurrent\n\n\n}\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\npostfix\n \nfunc\n \n++\n(\ninout\n \nx\n:\n \nInt\n)\n \n->\n \nInt\n \n{\n\n    \n// that's better\n\n\n    \ndefer\n \n{\n \nx\n \n+=\n \n1\n \n}\n\n\n    \nreturn\n \nx\n\n\n}\n\n\n\n\n\n\n\nreference\n\n\n\n\nhttp://nshipster.com/guard-and-defer/",
+            "title": "\u5947\u6280\u6deb\u5de7"
+        },
+        {
+            "location": "/swift/magic-in-swift/#in-swift",
+            "text": "",
+            "title": "\u5947\u6280\u6deb\u5de7 in Swift"
+        },
+        {
+            "location": "/swift/magic-in-swift/#defer",
+            "text": "defer  \u7684\u6267\u884c\u662f\u5728\u5f53\u524d scrope \u6267\u884c\u4e4b\u540e",
+            "title": "Defer"
+        },
+        {
+            "location": "/swift/magic-in-swift/#_1",
+            "text": "\u6709\u4e86  defer  \u4ee5\u540e\uff0c\u518d\u4e5f\u4e0d\u6015\u8d44\u6e90\u5fd8\u8bb0\u91ca\u653e\u7684\u95ee\u9898\u4e86\uff01   1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21 func   resizeImage ( url :   NSURL )   ->   UIImage ?   { \n     // ... \n     let   dataSize :   Int   =   ... \n     let   destData   =   UnsafeMutablePointer < UInt8 >. alloc ( dataSize )       defer   {           // \u4e0d\u7ba1\u8fd9\u4e2a\u4e0b\u9762\u8d70\u5230\u54ea\u4e2a\u5206\u652f\uff0c\u53ea\u8981\u5f53\u524d\u51fd\u6570\u6267\u884c\u5b8c\uff0cdestData \u90fd\u4f1a\u88ab\u91ca\u653e           destData . dealloc ( dataSize )       }  \n     var   destBuffer   =   vImage_Buffer ( data :   destData ,   ...) \n\n     // scale the image from sourceBuffer to destBuffer \n     var   error   =   vImageScale_ARGB8888 (& sourceBuffer ,   & destBuffer ,   ...) \n     guard   error   ==   kvImageNoError  \n         else   {   return   nil   } \n\n     // create a CGImage from the destBuffer \n     guard   let   destCGImage   =   vImageCreateCGImageFromBuffer (& destBuffer ,   & format ,   ...)  \n         else   {   return   nil   } \n     // ...  }",
+            "title": "\u5b89\u5168\u5730\u91ca\u653e\u8d44\u6e90"
+        },
+        {
+            "location": "/swift/magic-in-swift/#trick",
+            "text": "\u5b9e\u73b0\u7c7b\u4f3c C \u4e2d\u7684  x++  \u6548\u679c\uff0c\u5de7\u5999\u5730\u5229\u7528\u4e86  defer  \u7684\u5ef6\u65f6\u7279\u6027\u3002\u4e5f\u5c31\u662f\u5728\u51fd\u6570\u8fd4\u56de\u4e4b\u540e\uff0c x  \u7684\u503c\u624d\u4f1a\u53d1\u751f\u6539\u53d8\u3002  1\n2\n3\n4\n5\n6 postfix   func   ++ ( inout   x :   Int )   ->   Int   { \n     // fuck temp value \n     let   current   =   x \n     x   +=   1 \n     return   current  }    1\n2\n3\n4\n5 postfix   func   ++ ( inout   x :   Int )   ->   Int   { \n     // that's better       defer   {   x   +=   1   }       return   x  }",
+            "title": "\u4e00\u4e2a\u5c0f trick"
+        },
+        {
+            "location": "/swift/magic-in-swift/#reference",
+            "text": "http://nshipster.com/guard-and-defer/",
+            "title": "reference"
         }
     ]
 }

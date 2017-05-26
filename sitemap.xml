@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-05-19</lastmod>
+     <lastmod>2017-05-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,20 +12,26 @@
     
         
     <url>
-     <loc>/swift/reactive-swift/</loc>
-     <lastmod>2017-05-19</lastmod>
+     <loc>/swift/frp-in-swift/</loc>
+     <lastmod>2017-05-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/swift/frp-in-swift/</loc>
-     <lastmod>2017-05-19</lastmod>
+     <loc>/swift/rxswift/</loc>
+     <lastmod>2017-05-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/swift/memory-management/</loc>
-     <lastmod>2017-05-19</lastmod>
+     <lastmod>2017-05-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/swift/magic-in-swift/</loc>
+     <lastmod>2017-05-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
