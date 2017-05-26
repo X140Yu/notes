@@ -1,3 +1,8 @@
+>这是 2017/05/26 我在知乎 iOS 团队内部做的一次分享
+
+<script async class="speakerdeck-embed" data-slide="1" data-id="69a9cff70bc74577a78194958fe41a33" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+
 # Functional Reactive Programming in Swift
 
 ## What?
