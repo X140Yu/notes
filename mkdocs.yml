@@ -1,8 +1,15 @@
 site_name: X140Yu's notes
 theme: 'material'
+markdown_extensions:
+  - codehilite(linenums=true)
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/x140yu'
 pages:
   - Home: index.md
   - Swift:
-    - 'ReactiveSwift': 'swift/reactive-swift.md'
-    - 'FRP in Swift': 'swift/frp-in-swift.md'
+    - 'FRP basics': 'swift/frp-in-swift.md'
+    - 'RxSwift': 'swift/rxswift.md'
     - 'Memory management': 'swift/memory-management.md'
+    - '奇技淫巧': 'swift/magic-in-swift.md'
