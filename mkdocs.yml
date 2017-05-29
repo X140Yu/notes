@@ -8,6 +8,8 @@ extra:
       link: 'https://github.com/x140yu'
 pages:
   - Home: index.md
+  - iOS:
+    - 'Xcode': 'ios/xcode.md'
   - Swift:
     - 'FRP basics': 'swift/frp-in-swift.md'
     - 'RxSwift': 'swift/rxswift.md'
@@ -16,3 +18,4 @@ pages:
   - FrontEnd:
     - 'HTML': 'fe/01-HTML-Basics.md'
     - 'CSS': 'fe/02-CSS-Basics.md'
+  - dots: 'dot/mix.md'

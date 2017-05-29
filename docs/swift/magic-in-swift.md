@@ -1,5 +1,19 @@
 # 奇技淫巧 in Swift
 
+## DispatchWorkItem
+Cancel a delayed async GCD task using `DispatchWorkItem` if you don't want it execute anymore.
+
+```swift
+let item = DispatchWorkItem {
+    /// do something 
+}
+// 
+DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: item)
+// cancel if needed
+item.cancel()
+```
+
+
 ## Defer
 `defer` 的执行是在当前 scrope 执行之后
 
