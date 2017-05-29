@@ -12,6 +12,16 @@
     
         
     <url>
+     <loc>/ios/xcode/</loc>
+     <lastmod>2017-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/swift/frp-in-swift/</loc>
      <lastmod>2017-05-29</lastmod>
      <changefreq>daily</changefreq>
@@ -51,6 +61,14 @@
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+    <url>
+     <loc>/dot/mix/</loc>
+     <lastmod>2017-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
 </urlset>
