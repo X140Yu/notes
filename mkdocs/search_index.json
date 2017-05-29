@@ -147,13 +147,68 @@
         },
         {
             "location": "/swift/rxswift/",
-            "text": "RxSwift",
+            "text": "RxSwift\n\n\nBasic\n\n\nThe logo of \nReactiveX\n is a electric eel\uff08\u7535\u9cd7\uff09.\n\n\nCore issues with writing asynchronous code,\n\n\n\n\nthe order in which pieces of work are performed\n\n\nshared mutable data.\n\n\n\n\nSide effect, any change to the state outside of the current scope. \n\n\nObservables\n\n\nObservable<T>\n provides the ability to asynchronously produce a sequence of events that can \u201ccarry\u201d an immutable snapshot of data T. It allows classes to subscribe for values emitted by another class over time.\n\n\nAn \nObservable\n is just a sequence.\n\n\nThere are many ways to create a \nObservable\n, \njust\n, \nof\n, \ncreate\n, etc.\n\n\nObservableType\n protocol\n\n\nAn observable can emmit three types of events,\n\n\n\n\nnext\n\n\ncompleted\n\n\nerror\n\n\n\n\nWhen an \nObsservable\n emmits \ncompleted\n or \nerror\n event, it can no longer emit events, that means, it's life is done.\n\n\nSubjects\n\n\nSubjects act as both an \nobservable\n and as an \nobserver\n. The subject received \n.next\n events, and each time it received an event, it turned around and emitted it to its subscriber.\n\n\nPublishSubject\n\n\nThe \nPublishSubject\n only emits to current subscribers. But when a \nPublishSubject\n send a stop event(\n.completed\n or \n.error\n), the subscribe after that stop can also receive the event.\n\n\n\nBehaviorSubject\n\n\nBehaviorSubjects\n work similarly to \nPublishSubjects\n, except they will replay the latest \n.next\n event to new subscribers.\n\n\nYou have to specify the default value when create the \nBehaviorSubject\n.\n\n\n\n\nReplaySubject\n\n\nIt will then replay a buffer to new subscribers.\n\n\nYou have to specify the buffer size when create the \nReplaySubject\n.\n\n\n\n\nVariable\n\n\nA \nVariable\n wraps a \nBehaviorSubject\n and stores its current value as state. But it's value can not generate \n.error\n.\n\n\nOperators\n\n\nLike transformation operators for array(\nmap\n, \nfilter\n, \nreduce\n), you can apply these simlar concept to Observables. They don't cause side effects.\n\n\nSchedulers\n\n\nJust like dispatch queues.\n\n\nCredits\n\n\n\n\nThe RxSwift Book",
             "title": "RxSwift"
         },
         {
             "location": "/swift/rxswift/#rxswift",
             "text": "",
             "title": "RxSwift"
+        },
+        {
+            "location": "/swift/rxswift/#basic",
+            "text": "The logo of  ReactiveX  is a electric eel\uff08\u7535\u9cd7\uff09.  Core issues with writing asynchronous code,   the order in which pieces of work are performed  shared mutable data.   Side effect, any change to the state outside of the current scope.",
+            "title": "Basic"
+        },
+        {
+            "location": "/swift/rxswift/#observables",
+            "text": "Observable<T>  provides the ability to asynchronously produce a sequence of events that can \u201ccarry\u201d an immutable snapshot of data T. It allows classes to subscribe for values emitted by another class over time.  An  Observable  is just a sequence.  There are many ways to create a  Observable ,  just ,  of ,  create , etc.",
+            "title": "Observables"
+        },
+        {
+            "location": "/swift/rxswift/#observabletype-protocol",
+            "text": "An observable can emmit three types of events,   next  completed  error   When an  Obsservable  emmits  completed  or  error  event, it can no longer emit events, that means, it's life is done.",
+            "title": "ObservableType protocol"
+        },
+        {
+            "location": "/swift/rxswift/#subjects",
+            "text": "Subjects act as both an  observable  and as an  observer . The subject received  .next  events, and each time it received an event, it turned around and emitted it to its subscriber.",
+            "title": "Subjects"
+        },
+        {
+            "location": "/swift/rxswift/#publishsubject",
+            "text": "The  PublishSubject  only emits to current subscribers. But when a  PublishSubject  send a stop event( .completed  or  .error ), the subscribe after that stop can also receive the event.",
+            "title": "PublishSubject"
+        },
+        {
+            "location": "/swift/rxswift/#behaviorsubject",
+            "text": "BehaviorSubjects  work similarly to  PublishSubjects , except they will replay the latest  .next  event to new subscribers.  You have to specify the default value when create the  BehaviorSubject .",
+            "title": "BehaviorSubject"
+        },
+        {
+            "location": "/swift/rxswift/#replaysubject",
+            "text": "It will then replay a buffer to new subscribers.  You have to specify the buffer size when create the  ReplaySubject .",
+            "title": "ReplaySubject"
+        },
+        {
+            "location": "/swift/rxswift/#variable",
+            "text": "A  Variable  wraps a  BehaviorSubject  and stores its current value as state. But it's value can not generate  .error .",
+            "title": "Variable"
+        },
+        {
+            "location": "/swift/rxswift/#operators",
+            "text": "Like transformation operators for array( map ,  filter ,  reduce ), you can apply these simlar concept to Observables. They don't cause side effects.",
+            "title": "Operators"
+        },
+        {
+            "location": "/swift/rxswift/#schedulers",
+            "text": "Just like dispatch queues.",
+            "title": "Schedulers"
+        },
+        {
+            "location": "/swift/rxswift/#credits",
+            "text": "The RxSwift Book",
+            "title": "Credits"
         },
         {
             "location": "/swift/memory-management/",

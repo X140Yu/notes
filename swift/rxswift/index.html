@@ -230,9 +230,118 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        RxSwift
+      </label>
+    
     <a href="./" title="RxSwift" class="md-nav__link md-nav__link--active">
       RxSwift
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic" title="Basic" class="md-nav__link">
+    Basic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observables" title="Observables" class="md-nav__link">
+    Observables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observabletype-protocol" title="ObservableType protocol" class="md-nav__link">
+    ObservableType protocol
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subjects" title="Subjects" class="md-nav__link">
+    Subjects
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publishsubject" title="PublishSubject" class="md-nav__link">
+    PublishSubject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behaviorsubject" title="BehaviorSubject" class="md-nav__link">
+    BehaviorSubject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replaysubject" title="ReplaySubject" class="md-nav__link">
+    ReplaySubject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable" title="Variable" class="md-nav__link">
+    Variable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" title="Operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedulers" title="Schedulers" class="md-nav__link">
+    Schedulers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" title="Credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -343,6 +452,102 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic" title="Basic" class="md-nav__link">
+    Basic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observables" title="Observables" class="md-nav__link">
+    Observables
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#observabletype-protocol" title="ObservableType protocol" class="md-nav__link">
+    ObservableType protocol
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subjects" title="Subjects" class="md-nav__link">
+    Subjects
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#publishsubject" title="PublishSubject" class="md-nav__link">
+    PublishSubject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behaviorsubject" title="BehaviorSubject" class="md-nav__link">
+    BehaviorSubject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replaysubject" title="ReplaySubject" class="md-nav__link">
+    ReplaySubject
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable" title="Variable" class="md-nav__link">
+    Variable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" title="Operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedulers" title="Schedulers" class="md-nav__link">
+    Schedulers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" title="Credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -354,7 +559,50 @@
               
                 
                 
-                <h1 id="rxswift">RxSwift</h1>
+                <h1 id="rxswift"><a href="https://github.com/ReactiveX/RxSwift">RxSwift</a></h1>
+<h2 id="basic">Basic</h2>
+<p>The logo of <a href="http://reactivex.io/">ReactiveX</a> is a electric eel（电鳗）.</p>
+<p>Core issues with writing asynchronous code,</p>
+<ul>
+<li>the order in which pieces of work are performed</li>
+<li>shared mutable data.</li>
+</ul>
+<p>Side effect, any change to the state outside of the current scope. </p>
+<h2 id="observables">Observables</h2>
+<p><code>Observable&lt;T&gt;</code> provides the ability to asynchronously produce a sequence of events that can “carry” an immutable snapshot of data T. It allows classes to subscribe for values emitted by another class over time.</p>
+<p>An <code>Observable</code> is just a sequence.</p>
+<p>There are many ways to create a <code>Observable</code>, <code>just</code>, <code>of</code>, <code>create</code>, etc.</p>
+<h3 id="observabletype-protocol"><code>ObservableType</code> protocol</h3>
+<p>An observable can emmit three types of events,</p>
+<ul>
+<li><code>next</code></li>
+<li><code>completed</code></li>
+<li><code>error</code></li>
+</ul>
+<p>When an <code>Obsservable</code> emmits <code>completed</code> or <code>error</code> event, it can no longer emit events, that means, it's life is done.</p>
+<h2 id="subjects">Subjects</h2>
+<p>Subjects act as both an <code>observable</code> and as an <code>observer</code>. The subject received <code>.next</code> events, and each time it received an event, it turned around and emitted it to its subscriber.</p>
+<h3 id="publishsubject">PublishSubject</h3>
+<p>The <code>PublishSubject</code> only emits to current subscribers. But when a <code>PublishSubject</code> send a stop event(<code>.completed</code> or <code>.error</code>), the subscribe after that stop can also receive the event.
+<img alt="" src="../rxswift/01-publishSubject.png" /></p>
+<h3 id="behaviorsubject">BehaviorSubject</h3>
+<p><code>BehaviorSubjects</code> work similarly to <code>PublishSubjects</code>, except they will replay the latest <code>.next</code> event to new subscribers.</p>
+<p>You have to specify the default value when create the <code>BehaviorSubject</code>.</p>
+<p><img alt="" src="../rxswift/02-behaviorSubject.png" /></p>
+<h3 id="replaysubject">ReplaySubject</h3>
+<p>It will then replay a buffer to new subscribers.</p>
+<p>You have to specify the buffer size when create the <code>ReplaySubject</code>.</p>
+<p><img alt="" src="../rxswift/03-replaySubject.png" /></p>
+<h3 id="variable">Variable</h3>
+<p>A <code>Variable</code> wraps a <code>BehaviorSubject</code> and stores its current value as state. But it's value can not generate <code>.error</code>.</p>
+<h2 id="operators">Operators</h2>
+<p>Like transformation operators for array(<code>map</code>, <code>filter</code>, <code>reduce</code>), you can apply these simlar concept to Observables. They don't cause side effects.</p>
+<h2 id="schedulers">Schedulers</h2>
+<p>Just like dispatch queues.</p>
+<h2 id="credits">Credits</h2>
+<ul>
+<li>The RxSwift Book</li>
+</ul>
                 
                   
                 
