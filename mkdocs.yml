@@ -13,3 +13,6 @@ pages:
     - 'RxSwift': 'swift/rxswift.md'
     - 'Memory management': 'swift/memory-management.md'
     - '奇技淫巧': 'swift/magic-in-swift.md'
+  - FrontEnd:
+    - 'HTML': 'fe/01-HTML-Basics.md'
+    - 'CSS': 'fe/02-CSS-Basics.md'
