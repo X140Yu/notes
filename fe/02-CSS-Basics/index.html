@@ -1,0 +1,1425 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.6.1">
+    
+    
+      
+        <title>CSS - X140Yu's notes</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-56ade86843.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-4d0d3f2fbf.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="X140Yu's notes" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  FrontEnd
+                </span>
+              
+            
+            CSS
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <div class="md-header-nav__source">
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    X140Yu's notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Swift
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Swift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../swift/frp-in-swift/" title="FRP basics" class="md-nav__link">
+      FRP basics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../swift/rxswift/" title="RxSwift" class="md-nav__link">
+      RxSwift
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../swift/memory-management/" title="Memory management" class="md-nav__link">
+      Memory management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../swift/magic-in-swift/" title="奇技淫巧" class="md-nav__link">
+      奇技淫巧
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      FrontEnd
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        FrontEnd
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01-HTML-Basics/" title="HTML" class="md-nav__link">
+      HTML
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        CSS
+      </label>
+    
+    <a href="./" title="CSS" class="md-nav__link md-nav__link--active">
+      CSS
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#css" title="CSS 的引入方式" class="md-nav__link">
+    CSS 的引入方式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="1. 作为属性" class="md-nav__link">
+    1. 作为属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-head" title="2. 写在 &lt;head&gt; 标签里" class="md-nav__link">
+    2. 写在 &lt;head&gt; 标签里
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" title="3. 作为一个单独的文件" class="md-nav__link">
+    3. 作为一个单独的文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css_1" title="CSS 的语法" class="md-nav__link">
+    CSS 的语法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selector" title="一、selector" class="md-nav__link">
+    一、selector
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tag" title="1. tag" class="md-nav__link">
+    1. tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-class" title="2. class" class="md-nav__link">
+    2. class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-id" title="3. ID" class="md-nav__link">
+    3. ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" title="4. 其它" class="md-nav__link">
+    4. 其它
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inheritance" title="二、Inheritance" class="md-nav__link">
+    二、Inheritance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priority" title="三、Priority" class="md-nav__link">
+    三、Priority
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-size-unit" title="Color &amp; Size Unit" class="md-nav__link">
+    Color &amp; Size Unit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color" title="Color" class="md-nav__link">
+    Color
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-names" title="1. Names" class="md-nav__link">
+    1. Names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rgb-rgba" title="2. rgb, rgba" class="md-nav__link">
+    2. rgb, rgba
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hsl-hsla" title="3. hsl, hsla" class="md-nav__link">
+    3. hsl, hsla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hexadecimal" title="4. Hexadecimal" class="md-nav__link">
+    4. Hexadecimal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#size" title="Size" class="md-nav__link">
+    Size
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-px" title="1. px" class="md-nav__link">
+    1. px
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="2. %" class="md-nav__link">
+    2. %
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-em" title="3. em" class="md-nav__link">
+    3. em
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rem" title="4. rem" class="md-nav__link">
+    4. rem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" title="text" class="md-nav__link">
+    text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#font" title="font" class="md-nav__link">
+    font
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-property" title="font property" class="md-nav__link">
+    font property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-height" title="line-height" class="md-nav__link">
+    line-height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-property" title="text property" class="md-nav__link">
+    text property
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#box-model" title="Box Model" class="md-nav__link">
+    Box Model
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display" title="display" class="md-nav__link">
+    display
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#width-height" title="width &amp; height" class="md-nav__link">
+    width &amp; height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border-padding-marigin" title="border &amp; padding &amp; marigin" class="md-nav__link">
+    border &amp; padding &amp; marigin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#position" title="Position" class="md-nav__link">
+    Position
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#css" title="CSS 的引入方式" class="md-nav__link">
+    CSS 的引入方式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" title="1. 作为属性" class="md-nav__link">
+    1. 作为属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-head" title="2. 写在 &lt;head&gt; 标签里" class="md-nav__link">
+    2. 写在 &lt;head&gt; 标签里
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" title="3. 作为一个单独的文件" class="md-nav__link">
+    3. 作为一个单独的文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#css_1" title="CSS 的语法" class="md-nav__link">
+    CSS 的语法
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selector" title="一、selector" class="md-nav__link">
+    一、selector
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-tag" title="1. tag" class="md-nav__link">
+    1. tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-class" title="2. class" class="md-nav__link">
+    2. class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-id" title="3. ID" class="md-nav__link">
+    3. ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" title="4. 其它" class="md-nav__link">
+    4. 其它
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inheritance" title="二、Inheritance" class="md-nav__link">
+    二、Inheritance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#priority" title="三、Priority" class="md-nav__link">
+    三、Priority
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-size-unit" title="Color &amp; Size Unit" class="md-nav__link">
+    Color &amp; Size Unit
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color" title="Color" class="md-nav__link">
+    Color
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-names" title="1. Names" class="md-nav__link">
+    1. Names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-rgb-rgba" title="2. rgb, rgba" class="md-nav__link">
+    2. rgb, rgba
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-hsl-hsla" title="3. hsl, hsla" class="md-nav__link">
+    3. hsl, hsla
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hexadecimal" title="4. Hexadecimal" class="md-nav__link">
+    4. Hexadecimal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#size" title="Size" class="md-nav__link">
+    Size
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-px" title="1. px" class="md-nav__link">
+    1. px
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" title="2. %" class="md-nav__link">
+    2. %
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-em" title="3. em" class="md-nav__link">
+    3. em
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-rem" title="4. rem" class="md-nav__link">
+    4. rem
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text" title="text" class="md-nav__link">
+    text
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#font" title="font" class="md-nav__link">
+    font
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-property" title="font property" class="md-nav__link">
+    font property
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#line-height" title="line-height" class="md-nav__link">
+    line-height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-property" title="text property" class="md-nav__link">
+    text property
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#box-model" title="Box Model" class="md-nav__link">
+    Box Model
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display" title="display" class="md-nav__link">
+    display
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#width-height" title="width &amp; height" class="md-nav__link">
+    width &amp; height
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#border-padding-marigin" title="border &amp; padding &amp; marigin" class="md-nav__link">
+    border &amp; padding &amp; marigin
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#position" title="Position" class="md-nav__link">
+    Position
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>CSS</h1>
+                
+                <h3 id="css">CSS 的引入方式</h3>
+<h4 id="1">1. 作为属性</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red;&quot;</span><span class="p">&gt;</span>This text is important.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="2-head">2. 写在 <code>&lt;head&gt;</code> 标签里</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+      <span class="nt">p</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span> <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This paragraph will be red.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="3">3. 作为一个单独的文件</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello World<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This paragraph will be red.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">p</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="css_1">CSS 的语法</h3>
+<p>CSS 的语法非常简单：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">selector</span> <span class="p">{</span> <span class="n">property</span><span class="p">:</span> <span class="n">value</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c">/* 其实也就是 */</span>
+<span class="nt">who</span> <span class="p">{</span> <span class="n">what</span><span class="p">:</span> <span class="n">how</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="selector">一、selector</h4>
+<p>知道了语法，那么如何找到一个元素成了首要的问题。CSS 通过以下几种方式选中一个元素：</p>
+<h5 id="1-tag">1. tag</h5>
+<p>直接通过选中标签和名字，便可以选中这个标签。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">a</span> <span class="p">{</span> <span class="c">/* Links */</span> <span class="p">}</span>
+<span class="nt">p</span> <span class="p">{</span> <span class="c">/* Paragraphs */</span> <span class="p">}</span>
+<span class="nt">ul</span> <span class="p">{</span> <span class="c">/* Unordered lists */</span> <span class="p">}</span>
+<span class="nt">li</span> <span class="p">{</span> <span class="c">/* List items */</span> <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h5 id="2-class">2. class</h5>
+<p>我们可以给 HTML 的元素添加 class，然后通过选中 class 来达到选择某个元素的目的。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;date&quot;</span><span class="p">&gt;</span>
+  Saturday Feb 21
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+  The event will be on <span class="p">&lt;</span><span class="nt">em</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;date&quot;</span><span class="p">&gt;</span>Saturday<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/* 所有 class 为 date 的元素都会变为红色*/</span>
+<span class="p">.</span><span class="nc">date</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h5 id="3-id">3. ID</h5>
+<p>跟 class 很像的还有 ID，不过语法略微不同：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;tagline&quot;</span><span class="p">&gt;</span>This heading will be orange.<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">#</span><span class="nn">tagline</span><span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">orange</span><span class="p">;}</span>
+</pre></div>
+</td></tr></table>
+
+<p>注意，id 是 <code>#</code> 开头，而 class 是 <code>.</code> 开头。</p>
+<h5 id="4">4. 其它</h5>
+<ol>
+<li>可以通过 <code>tag+class</code> 的形式，把这些 selector 给组合起来：</li>
+</ol>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">.</span><span class="nc">date</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* em 中带 date class 的都会变成蓝色 */</span>
+<span class="nt">em</span><span class="p">.</span><span class="nc">date</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ol>
+<li>Hierarchy selectors</li>
+</ol>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/*选中 header 里的所有 a 标签*/</span>
+<span class="nt">header</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ol>
+<li>Pseudo-class selectors</li>
+</ol>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">a</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/*当 a 标签在 hover 状态的时候变成红色*/</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="inheritance">二、Inheritance</h4>
+<p>有一些属性是可以被继承的：</p>
+<ol>
+<li>text color</li>
+<li>font (family, size, style, weight)</li>
+<li>line-height</li>
+</ol>
+<h4 id="priority">三、Priority</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sx">#id</span> <span class="sx">selectors</span> <span class="sx">are</span> <span class="sx">worth</span> <span class="mi">100</span>
+<span class="kr">.class</span> <span class="nc">selectors</span> <span class="sx">are</span> <span class="sx">worth</span> <span class="mi">10</span>
+<span class="sx">tag</span> <span class="sx">selectors</span> <span class="sx">are</span> <span class="sx">worth</span> <span class="mi">1</span>
+</pre></div>
+</td></tr></table>
+
+<p>所以当有多个 selectors 都指向一个元素的时候，只有优先级最高的会被应用到那个元素上面去：</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;message&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;introduction&quot;</span><span class="p">&gt;</span>
+  MarkSheet is a free HTML and CSS tutorial.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/*这个时候只有 #introduction 会被应用，因为它有 100 分*/</span>
+<span class="p">#</span><span class="nn">introduction</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;}</span>
+<span class="p">.</span><span class="nc">message</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;}</span>
+<span class="nt">p</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;}</span>
+</pre></div>
+</td></tr></table>
+
+<p>为了避免冲突：</p>
+<ol>
+<li>多使用 class，尽量避免 id</li>
+<li>不要对一个元素使用应用多个 class</li>
+<li>不要使用 inline css 的方式</li>
+</ol>
+<h3 id="color-size-unit">Color &amp; Size Unit</h3>
+<h4 id="color">Color</h4>
+<h5 id="1-names">1. Names</h5>
+<p>CSS 内置的 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">100 多种</a>颜色的名字，可以直接使用。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">body</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;}</span>
+<span class="nt">a</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="kc">orange</span><span class="p">;}</span>
+</pre></div>
+</td></tr></table>
+
+<h5 id="2-rgb-rgba">2. rgb, rgba</h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">a</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="mi">219</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">68</span><span class="p">);}</span>
+<span class="nt">body</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">);}</span>
+</pre></div>
+</td></tr></table>
+
+<h5 id="3-hsl-hsla">3. hsl, hsla</h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/*the Hue a value ranging from 0 to 360, defines which color you want. 颜色*/</span>
+<span class="c">/*the Saturation percentage, ranging from 0% to 100%, defines how much of that color you want. 饱和度*/</span>
+<span class="c">/*the Lightness percentage, ranging from 0% to 100%, defines how bright you want that color to be. 亮度*/</span>
+<span class="nt">a</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="nb">hsl</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">68</span><span class="kt">%</span><span class="p">,</span> <span class="mi">56</span><span class="kt">%</span><span class="p">);}</span>
+<span class="c">/*a 代表 alpha*/</span>
+<span class="nt">body</span> <span class="p">{</span> <span class="k">color</span><span class="p">:</span> <span class="nb">hsla</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">68</span><span class="kt">%</span><span class="p">,</span> <span class="mi">56</span><span class="kt">%</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);}</span>
+</pre></div>
+</td></tr></table>
+
+<h5 id="4-hexadecimal">4. Hexadecimal</h5>
+<p>没什么好说的，就是用 16 进制表示颜色嘛~</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">body</span> <span class="p">{</span> <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e42331</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="size">Size</h4>
+<p>CSS 中有很多属性需要 size 的单位，比如：
+- font-size
+- border-width
+- margin
+- left/right/top/bottom</p>
+<p>而 CSS 中的 size 单位有以下几种：
+- px
+- %
+- em</p>
+<h5 id="1-px">1. px</h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/* px 代表的是绝对宽度，是不会改变的，当在设置 position 和 spacing 的时候广泛使用 */</span>
+<span class="nt">body</span> <span class="p">{</span> <span class="k">width</span><span class="p">:</span> <span class="mi">400</span><span class="kt">px</span><span class="p">;}</span>
+</pre></div>
+</td></tr></table>
+
+<h5 id="2">2. %</h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/* % 是相对的单位，它的百分比是根据它的父级比的 */</span>
+<span class="nt">strong</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">150</span><span class="kt">%</span><span class="p">;}</span>
+</pre></div>
+</td></tr></table>
+
+<h5 id="3-em">3. em</h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/* em 也是相对的单位，它的大小是根据它的父级的 font-size 来的 */</span>
+<span class="c">/* 一改变 body 的 font-size，h1, h2, aside 的值都会相应地改变 */</span>
+<span class="nt">body</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
+<span class="nt">h1</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">2</span><span class="kt">em</span><span class="p">;</span> <span class="p">}</span>        <span class="c">/* = 32px */</span>
+<span class="nt">h2</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">em</span><span class="p">;</span> <span class="p">}</span>      <span class="c">/* = 24px */</span>
+<span class="nt">aside</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.75</span><span class="kt">em</span><span class="p">;</span> <span class="p">}</span>  <span class="c">/* = 12px */</span>
+</pre></div>
+</td></tr></table>
+
+<h5 id="4-rem">4. rem</h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/* em 是根据父级，而 rem 是根据 html，可以理解为 root-em */</span>
+<span class="nt">html</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;}</span>
+<span class="nt">body</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;}</span>     <span class="c">/* = 18px */</span>
+<span class="nt">h1</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">2</span><span class="kt">rem</span><span class="p">;}</span>       <span class="c">/* = 36px */</span>
+<span class="nt">h2</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">rem</span><span class="p">;}</span>     <span class="c">/* = 27px */</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="text">text</h3>
+<h4 id="font">font</h4>
+<p>通过 font-family 属性可以设置字体，这么多值是因为当前一种字体计算机没有装的时候，浏览器会加载后一种字体，当这些字体都没有的时候，会加载默认的字体。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">body</span><span class="p">{</span> <span class="k">font-family</span><span class="p">:</span> <span class="n">Arial</span><span class="p">,</span> <span class="n">Verdana</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;}</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="font-property">font property</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/* 比较常用的是以下三种，文档都可以查到就不再赘述了 */</span>
+<span class="nt">p</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;}</span>
+<span class="nt">h2</span> <span class="p">{</span> <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;}</span>
+<span class="nt">h2</span> <span class="p">{</span> <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;}</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="line-height">line-height</h4>
+<p><code>line-height</code> 有三种单位，<code>px</code>, <code>em</code>, <code>%</code>，当是数字的时候，单位默认是数字</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/* 这个时候 line-height 是 16*1.5=24px */</span>
+<span class="nt">body</span> <span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span> <span class="k">line-height</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">;}</span>
+<span class="c">/* line-height 也可以被继承，这个时候 blockquote 的 line-height 是 18*1.5=27px */</span>
+<span class="nt">blockquote</span><span class="p">{</span> <span class="k">font-size</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;}</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="text-property">text property</h4>
+<p>有一些 text 相关的属性，比如 <code>text-align, text-indent, text-shadow</code> 之类的，文档都可以查到，就不再说明。</p>
+<h3 id="box-model">Box Model</h3>
+<h4 id="display">display</h4>
+<p><code>display</code> 属性可以修改 HTML 元素的种类，比如 <code>&lt;p&gt;</code> 标签是 <code>block</code> 类型的，但是可以通过 <code>display</code> 修改为 <code>inline</code> 类型的（就像 <code>&lt;span&gt;</code> 一样）。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">p</span> <span class="p">{</span> <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>我们为什么要修改它们的种类呢？因为我们选择标签的时候是根据它们本身的种类，而不是它们显示的样子。比如我们要添加一个无序列表，但它的显示要是 <code>inline</code> 的，那显然 <code>&lt;ul&gt;</code> 是放在第一位的。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">&lt;!-- 它们显示默认是 block 的 --&gt;</span>
+<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;menu&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>Features<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>Pricing<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c">/* 把它们都显示在一行 */</span>
+<span class="p">.</span><span class="nc">menu</span> <span class="nt">li</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code>display: none</code> 和 <code>visibility: hidden</code> 的区别
+前者是完全把这个元素移除了，跟没有存在过一样，然而后者只是把它隐藏了，然而占用的位置还在。</li>
+</ul>
+<h4 id="width-height">width &amp; height</h4>
+<p>注意一点，如果内容超出了 <code>width &amp; height</code> 的区域，设置 <code>overflow</code> 属性可以避免超出的内容显示的有问题。</p>
+<h4 id="border-padding-marigin">border &amp; padding &amp; marigin</h4>
+<ul>
+<li>Content - The content of the box, where text and images appear</li>
+<li>Padding - Clears an area around the content. The padding is transparent</li>
+<li>Border - A border that goes around the padding and content</li>
+<li>Margin - Clears an area outside the border. The margin is transparent</li>
+</ul>
+<p>网上有很多关于 box model 的解释，其实很简单，看懂一张图就全明白了：</p>
+<p><img alt="" src="http://ww2.sinaimg.cn/large/5cc3eefejw1f9i64ygt9yj207705e0sk.jpg" /></p>
+<h3 id="position">Position</h3>
+<p>position 有几个备选的值：
+- static
+static 是默认的值</p>
+<ul>
+<li>relative
+很好理解，位置是相对的，比较的对象是它原本的位置。</li>
+<li>absolute</li>
+</ul>
+<p>先介绍一下 positioned 的概念：当一个元素的 position 是 relative || absolute || fixed 的时候，那它就 positioned 了。
+而当 position 是 absolute 的时候，这个元素的位置是根据它第一个已经 positioned 的祖先而确定的。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+  I&#39;m in position relative.
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    I&#39;m in position absolute!
+  <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</pre></div>
+</td></tr></table>
+
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">section</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">gold</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span> <span class="c">/* This turns the &lt;section&gt; into a point of reference for the &lt;p&gt; */</span>
+<span class="p">}</span>
+
+<span class="nt">p</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">limegreen</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span> <span class="c">/* This makes the &lt;p&gt; freely movable */</span>
+  <span class="k">bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span> <span class="c">/* 10px from the bottom */</span>
+  <span class="k">left</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span> <span class="c">/* 20px from the left */</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>fixed
+这个跟 absolute 很类似，只不过它真的是固定在一个位置了，边滚动屏幕的时候也不会跟着走，像极了网络上的牛皮癣小广告（摊手）</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../01-HTML-Basics/" title="HTML" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                HTML
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/x140yu" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-6b599127bc.js"></script>
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
