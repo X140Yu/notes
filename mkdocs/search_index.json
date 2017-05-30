@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome!\n\n\nHi, these are notes written by X140Yu.\n\n\nSite's \nRepository\n\n\nMy \nBlog\n\n\nThis site's articles are all under \nCC Attribution-ShareAlike 4.0 International\n Licence.\n\n\n1\n2\n3\n4\n# run in local server\n\nmkdocs serve\n\n# deploy to github pages\n\nmkdocs gh-deploy",
+            "text": "Welcome!\n\n\nHi, these are notes written by X140Yu.\n\n\nSite's \nRepository\n\n\nMy \nBlog\n\n\nThis site's articles are all under \nCC Attribution-ShareAlike 4.0 International\n Licence.\n\n\nIf you thought my notes help you a lot, why not buy me a drink :]\n\n\n\n\n1\n2\n3\n4\n# run in local server\n\nmkdocs serve\n\n# deploy to github pages\n\nmkdocs gh-deploy",
             "title": "Home"
         },
         {
             "location": "/#welcome",
-            "text": "Hi, these are notes written by X140Yu.  Site's  Repository  My  Blog  This site's articles are all under  CC Attribution-ShareAlike 4.0 International  Licence.  1\n2\n3\n4 # run in local server \nmkdocs serve # deploy to github pages \nmkdocs gh-deploy",
+            "text": "Hi, these are notes written by X140Yu.  Site's  Repository  My  Blog  This site's articles are all under  CC Attribution-ShareAlike 4.0 International  Licence.  If you thought my notes help you a lot, why not buy me a drink :]   1\n2\n3\n4 # run in local server \nmkdocs serve # deploy to github pages \nmkdocs gh-deploy",
             "title": "Welcome!"
         },
         {
@@ -147,7 +147,7 @@
         },
         {
             "location": "/swift/rxswift/",
-            "text": "RxSwift\n\n\nBasic\n\n\nThe logo of \nReactiveX\n is a electric eel\uff08\u7535\u9cd7\uff09.\n\n\nCore issues with writing asynchronous code,\n\n\n\n\nthe order in which pieces of work are performed\n\n\nshared mutable data.\n\n\n\n\nSide effect, any change to the state outside of the current scope. \n\n\nObservables\n\n\nObservable<T>\n provides the ability to asynchronously produce a sequence of events that can \u201ccarry\u201d an immutable snapshot of data T. It allows classes to subscribe for values emitted by another class over time.\n\n\nAn \nObservable\n is just a sequence.\n\n\nThere are many ways to create a \nObservable\n, \njust\n, \nof\n, \ncreate\n, etc.\n\n\nObservableType\n protocol\n\n\nAn observable can emmit three types of events,\n\n\n\n\nnext\n\n\ncompleted\n\n\nerror\n\n\n\n\nWhen an \nObsservable\n emmits \ncompleted\n or \nerror\n event, it can no longer emit events, that means, it's life is done.\n\n\nSubjects\n\n\nSubjects act as both an \nobservable\n and as an \nobserver\n. The subject received \n.next\n events, and each time it received an event, it turned around and emitted it to its subscriber.\n\n\nPublishSubject\n\n\nThe \nPublishSubject\n only emits to current subscribers. But when a \nPublishSubject\n send a stop event(\n.completed\n or \n.error\n), the subscribe after that stop can also receive the event.\n\n\n\nBehaviorSubject\n\n\nBehaviorSubjects\n work similarly to \nPublishSubjects\n, except they will replay the latest \n.next\n event to new subscribers.\n\n\nYou have to specify the default value when create the \nBehaviorSubject\n.\n\n\n\n\nReplaySubject\n\n\nIt will then replay a buffer to new subscribers.\n\n\nYou have to specify the buffer size when create the \nReplaySubject\n.\n\n\n\n\nVariable\n\n\nA \nVariable\n wraps a \nBehaviorSubject\n and stores its current value as state. But it's value can not generate \n.error\n.\n\n\nOperators\n\n\nLike transformation operators for array(\nmap\n, \nfilter\n, \nreduce\n), you can apply these simlar concept to Observables. They don't cause side effects.\n\n\nSchedulers\n\n\nJust like dispatch queues.\n\n\nCredits\n\n\n\n\nThe RxSwift Book",
+            "text": "RxSwift\n\n\nBasic\n\n\nThe logo of \nReactiveX\n is a electric eel\uff08\u7535\u9cd7\uff09.\n\n\nCore issues with writing asynchronous code,\n\n\n\n\nthe order in which pieces of work are performed\n\n\nshared mutable data.\n\n\n\n\nSide effect, any change to the state outside of the current scope.\n\n\nObservables\n\n\nObservable<T>\n provides the ability to asynchronously produce a sequence of events that can \u201ccarry\u201d an immutable snapshot of data T. It allows classes to subscribe for values emitted by another class over time.\n\n\nAn \nObservable\n is just a sequence.\n\n\nThere are many ways to create a \nObservable\n, \njust\n, \nof\n, \ncreate\n, etc.\n\n\nObservableType\n protocol\n\n\nAn observable can emmit three types of events,\n\n\n\n\nnext\n\n\ncompleted\n\n\nerror\n\n\n\n\nWhen an \nObsservable\n emmits \ncompleted\n or \nerror\n event, it can no longer emit events, that means, it's life is done.\n\n\nSubjects\n\n\nSubjects act as both an \nobservable\n and as an \nobserver\n. The subject received \n.next\n events, and each time it received an event, it turned around and emitted it to its subscriber.\n\n\nPublishSubject\n\n\nThe \nPublishSubject\n only emits to current subscribers. But when a \nPublishSubject\n send a stop event(\n.completed\n or \n.error\n), the subscribe after that stop can also receive the event.\n\n\n\nBehaviorSubject\n\n\nBehaviorSubjects\n work similarly to \nPublishSubjects\n, except they will replay the latest \n.next\n event to new subscribers.\n\n\nYou have to specify the default value when create the \nBehaviorSubject\n.\n\n\n\n\nReplaySubject\n\n\nIt will then replay a buffer to new subscribers.\n\n\nYou have to specify the buffer size when create the \nReplaySubject\n.\n\n\n\n\nVariable\n\n\nA \nVariable\n wraps a \nBehaviorSubject\n and stores its current value as state. But it's value can not generate \n.error\n.\n\n\nOperators\n\n\nLike transformation operators for array(\nmap\n, \nfilter\n, \nreduce\n), you can apply these simlar concept to Observables. They don't cause side effects.\n\n\nCheck out the \nRxMarbles\n, it shows lots of operators.\n\n\nFliter\n\n\nIgnore\n\n\n\n\nignoreElements\n, it'll ignore all the \n.next\n events, only let the \n.completed\n & \n.error\n events go\n\n\nelementAt(2)\n, only pass the third event\n\n\nfilter { predicate closure }\n, it'll only pass the events which pass the predicate closure, just like the \nfilter\n in the Swift Standard Libray\n\n\n\n\nSkip\n\n\n\n\nskip(2)\n, skip the first 2 elements\n\n\nskipWhile { predicate closure }\n, it'll skip elements until one element has pass the predicate closure, if one element has passed it, the \nskipWhile\n will not work anymore\n\n\nA.skipUntil(B)\n, A & B are both \nObservable\ns, A's elements will be skipped until B emmits a element\n\n\n\n\nTake\n\n\n\n\ntake(2)\n, only take the first 2 elements\n\n\ntakeWhile { predicate closure }\n, like \nskipWhile\n but opposite, it'll only take the elements pass the predicate closure, but once a element won't pass the condition, the operator won't work, it won't take any elements\n\n\nA.takeUntil(B)\n, it'll take A's elements until B emmits a element, it's often used like this, \nsomeObservable.takeUntil(self.rx.deallocated)\n\n\n\n\nDistinct\n\n\n\n\ndistinctUntilChanged\n, it prevents sequential duplicates, \n(A-A-A-B-B-A-B).distinctUntilChanged\n -> \nA-B-A-B\n\n\n\n\nTransform\n\n\nTransform elements\n\n\n\n\ntoArray\n, transform individual elements in to an array\n\n\nmap\n, just like the Swift \nmap\n, but for \nObservable\ns\n\n\n\n\nTransform inner Observables\n\n\n\n\nflatMap\n, Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence. \nObservable\n inside \nObservable\n, we flatten that into one sequence.\n\n\n\n\n\n\n\n\nflatMapLatest\n, like \nflatMap\n, but when a new \nObservable\n of \nObservables\n comes, the previouse \nObservable\n of \nObservables\n are ignored, it'll switch to the latest one\n\n\n\n\n\n\nCombine\n\n\n\n\nstartWith\n, prefix an \nObservable\n with the given initial value\n\n\nconcat\n, \nA.concat(B)\n it waits A to complete, then subscribe to B\n\n\nmerge\n, a merged \nObservable\n subscribes to each of the sequence, when it's inner \nObservable\ns emmits events, it notify the outter observers. \nmerge\n in RxMarbles\n\n\ncombineLatest\n, \ncombineLatest\n in RxMarbles\n\n\nzip\n, it waitied for each to emit a new value, just like a zipper \nzip\n\n\nwithLatestFrom\n, \nA.withLatestFrom(B)\n when A emits a event, it will take the B's latest value\n\n\nsample\n\n\namb\n, \nA.amb(B)\n who comes last, who get unsubscribed\n\n\nswitchLatest\n, images are better than words\n\n\n\n\n\n\n\n\nreduce\n, like normal \nreduce\n in Swift, but for \nObservable\ns, but it'll only be called when the \nObservable\n completed\n\n\n\n\n1\n2\n3\n4\n5\nlet\n \nsource\n \n=\n \nObservable\n.\nof\n(\n1\n,\n \n3\n,\n \n5\n,\n \n7\n,\n \n9\n)\n\n\nlet\n \nobservable\n \n=\n \nsource\n.\nreduce\n(\n0\n,\n \naccumulator\n:\n \n+\n)\n\n\nobservable\n.\nsubscribe\n(\nonNext\n:\n \n{\n \nvalue\n \nin\n\n  \nprint\n(\nvalue\n)\n\n\n})\n \n// 25\n\n\n\n\n\n\n\n\n\nscan\n\n\n\n\n1\n2\n3\n4\n5\nlet\n \nsource\n \n=\n \nObservable\n.\nof\n(\n1\n,\n \n3\n,\n \n5\n,\n \n7\n,\n \n9\n)\n\n\nlet\n \nobservable\n \n=\n \nsource\n.\nscan\n(\n0\n,\n \naccumulator\n:\n \n+\n)\n\n\nobservable\n.\nsubscribe\n(\nonNext\n:\n \n{\n \nvalue\n \nin\n\n  \nprint\n(\nvalue\n)\n\n\n})\n \n// 1 4 9 16 25\n\n\n\n\n\n\n\nSchedulers\n\n\nJust like dispatch queues.\n\n\nCredits\n\n\n\n\nThe RxSwift Book",
             "title": "RxSwift"
         },
         {
@@ -197,8 +197,53 @@
         },
         {
             "location": "/swift/rxswift/#operators",
-            "text": "Like transformation operators for array( map ,  filter ,  reduce ), you can apply these simlar concept to Observables. They don't cause side effects.",
+            "text": "Like transformation operators for array( map ,  filter ,  reduce ), you can apply these simlar concept to Observables. They don't cause side effects.  Check out the  RxMarbles , it shows lots of operators.",
             "title": "Operators"
+        },
+        {
+            "location": "/swift/rxswift/#fliter",
+            "text": "",
+            "title": "Fliter"
+        },
+        {
+            "location": "/swift/rxswift/#ignore",
+            "text": "ignoreElements , it'll ignore all the  .next  events, only let the  .completed  &  .error  events go  elementAt(2) , only pass the third event  filter { predicate closure } , it'll only pass the events which pass the predicate closure, just like the  filter  in the Swift Standard Libray",
+            "title": "Ignore"
+        },
+        {
+            "location": "/swift/rxswift/#skip",
+            "text": "skip(2) , skip the first 2 elements  skipWhile { predicate closure } , it'll skip elements until one element has pass the predicate closure, if one element has passed it, the  skipWhile  will not work anymore  A.skipUntil(B) , A & B are both  Observable s, A's elements will be skipped until B emmits a element",
+            "title": "Skip"
+        },
+        {
+            "location": "/swift/rxswift/#take",
+            "text": "take(2) , only take the first 2 elements  takeWhile { predicate closure } , like  skipWhile  but opposite, it'll only take the elements pass the predicate closure, but once a element won't pass the condition, the operator won't work, it won't take any elements  A.takeUntil(B) , it'll take A's elements until B emmits a element, it's often used like this,  someObservable.takeUntil(self.rx.deallocated)",
+            "title": "Take"
+        },
+        {
+            "location": "/swift/rxswift/#distinct",
+            "text": "distinctUntilChanged , it prevents sequential duplicates,  (A-A-A-B-B-A-B).distinctUntilChanged  ->  A-B-A-B",
+            "title": "Distinct"
+        },
+        {
+            "location": "/swift/rxswift/#transform",
+            "text": "",
+            "title": "Transform"
+        },
+        {
+            "location": "/swift/rxswift/#transform-elements",
+            "text": "toArray , transform individual elements in to an array  map , just like the Swift  map , but for  Observable s",
+            "title": "Transform elements"
+        },
+        {
+            "location": "/swift/rxswift/#transform-inner-observables",
+            "text": "flatMap , Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence.  Observable  inside  Observable , we flatten that into one sequence.     flatMapLatest , like  flatMap , but when a new  Observable  of  Observables  comes, the previouse  Observable  of  Observables  are ignored, it'll switch to the latest one",
+            "title": "Transform inner Observables"
+        },
+        {
+            "location": "/swift/rxswift/#combine",
+            "text": "startWith , prefix an  Observable  with the given initial value  concat ,  A.concat(B)  it waits A to complete, then subscribe to B  merge , a merged  Observable  subscribes to each of the sequence, when it's inner  Observable s emmits events, it notify the outter observers.  merge  in RxMarbles  combineLatest ,  combineLatest  in RxMarbles  zip , it waitied for each to emit a new value, just like a zipper  zip  withLatestFrom ,  A.withLatestFrom(B)  when A emits a event, it will take the B's latest value  sample  amb ,  A.amb(B)  who comes last, who get unsubscribed  switchLatest , images are better than words     reduce , like normal  reduce  in Swift, but for  Observable s, but it'll only be called when the  Observable  completed   1\n2\n3\n4\n5 let   source   =   Observable . of ( 1 ,   3 ,   5 ,   7 ,   9 )  let   observable   =   source . reduce ( 0 ,   accumulator :   + )  observable . subscribe ( onNext :   {   value   in \n   print ( value )  })   // 25     scan   1\n2\n3\n4\n5 let   source   =   Observable . of ( 1 ,   3 ,   5 ,   7 ,   9 )  let   observable   =   source . scan ( 0 ,   accumulator :   + )  observable . subscribe ( onNext :   {   value   in \n   print ( value )  })   // 1 4 9 16 25",
+            "title": "Combine"
         },
         {
             "location": "/swift/rxswift/#schedulers",

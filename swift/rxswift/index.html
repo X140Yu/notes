@@ -321,6 +321,87 @@
     Operators
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fliter" title="Fliter" class="md-nav__link">
+    Fliter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ignore" title="Ignore" class="md-nav__link">
+    Ignore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip" title="Skip" class="md-nav__link">
+    Skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#take" title="Take" class="md-nav__link">
+    Take
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distinct" title="Distinct" class="md-nav__link">
+    Distinct
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform" title="Transform" class="md-nav__link">
+    Transform
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transform-elements" title="Transform elements" class="md-nav__link">
+    Transform elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform-inner-observables" title="Transform inner Observables" class="md-nav__link">
+    Transform inner Observables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combine" title="Combine" class="md-nav__link">
+    Combine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -528,6 +609,87 @@
     Operators
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fliter" title="Fliter" class="md-nav__link">
+    Fliter
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ignore" title="Ignore" class="md-nav__link">
+    Ignore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skip" title="Skip" class="md-nav__link">
+    Skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#take" title="Take" class="md-nav__link">
+    Take
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distinct" title="Distinct" class="md-nav__link">
+    Distinct
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform" title="Transform" class="md-nav__link">
+    Transform
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transform-elements" title="Transform elements" class="md-nav__link">
+    Transform elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transform-inner-observables" title="Transform inner Observables" class="md-nav__link">
+    Transform inner Observables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combine" title="Combine" class="md-nav__link">
+    Combine
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -567,7 +729,7 @@
 <li>the order in which pieces of work are performed</li>
 <li>shared mutable data.</li>
 </ul>
-<p>Side effect, any change to the state outside of the current scope. </p>
+<p>Side effect, any change to the state outside of the current scope.</p>
 <h2 id="observables">Observables</h2>
 <p><code>Observable&lt;T&gt;</code> provides the ability to asynchronously produce a sequence of events that can “carry” an immutable snapshot of data T. It allows classes to subscribe for values emitted by another class over time.</p>
 <p>An <code>Observable</code> is just a sequence.</p>
@@ -597,6 +759,88 @@
 <p>A <code>Variable</code> wraps a <code>BehaviorSubject</code> and stores its current value as state. But it's value can not generate <code>.error</code>.</p>
 <h2 id="operators">Operators</h2>
 <p>Like transformation operators for array(<code>map</code>, <code>filter</code>, <code>reduce</code>), you can apply these simlar concept to Observables. They don't cause side effects.</p>
+<p>Check out the <a href="http://rxmarbles.com/">RxMarbles</a>, it shows lots of operators.</p>
+<h3 id="fliter">Fliter</h3>
+<h4 id="ignore">Ignore</h4>
+<ul>
+<li><code>ignoreElements</code>, it'll ignore all the <code>.next</code> events, only let the <code>.completed</code> &amp; <code>.error</code> events go</li>
+<li><code>elementAt(2)</code>, only pass the third event</li>
+<li><code>filter { predicate closure }</code>, it'll only pass the events which pass the predicate closure, just like the <code>filter</code> in the Swift Standard Libray</li>
+</ul>
+<h4 id="skip">Skip</h4>
+<ul>
+<li><code>skip(2)</code>, skip the first 2 elements</li>
+<li><code>skipWhile { predicate closure }</code>, it'll skip elements until one element has pass the predicate closure, if one element has passed it, the <code>skipWhile</code> will not work anymore</li>
+<li><code>A.skipUntil(B)</code>, A &amp; B are both <code>Observable</code>s, A's elements will be skipped until B emmits a element</li>
+</ul>
+<h4 id="take">Take</h4>
+<ul>
+<li><code>take(2)</code>, only take the first 2 elements</li>
+<li><code>takeWhile { predicate closure }</code>, like <code>skipWhile</code> but opposite, it'll only take the elements pass the predicate closure, but once a element won't pass the condition, the operator won't work, it won't take any elements</li>
+<li><code>A.takeUntil(B)</code>, it'll take A's elements until B emmits a element, it's often used like this, <code>someObservable.takeUntil(self.rx.deallocated)</code></li>
+</ul>
+<h4 id="distinct">Distinct</h4>
+<ul>
+<li><code>distinctUntilChanged</code>, it prevents sequential duplicates, <code>(A-A-A-B-B-A-B).distinctUntilChanged</code> -&gt; <code>A-B-A-B</code></li>
+</ul>
+<h3 id="transform">Transform</h3>
+<h4 id="transform-elements">Transform elements</h4>
+<ul>
+<li><code>toArray</code>, transform individual elements in to an array</li>
+<li><code>map</code>, just like the Swift <code>map</code>, but for <code>Observable</code>s</li>
+</ul>
+<h4 id="transform-inner-observables">Transform inner Observables</h4>
+<ul>
+<li><code>flatMap</code>, Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence. <code>Observable</code> inside <code>Observable</code>, we flatten that into one sequence.</li>
+</ul>
+<p><img alt="" src="../rxswift/04-flatMap.png" /></p>
+<ul>
+<li><code>flatMapLatest</code>, like <code>flatMap</code>, but when a new <code>Observable</code> of <code>Observables</code> comes, the previouse <code>Observable</code> of <code>Observables</code> are ignored, it'll switch to the latest one</li>
+</ul>
+<p><img alt="" src="../rxswift/05-flatMapLatest.png" /></p>
+<h3 id="combine">Combine</h3>
+<ul>
+<li><code>startWith</code>, prefix an <code>Observable</code> with the given initial value</li>
+<li><code>concat</code>, <code>A.concat(B)</code> it waits A to complete, then subscribe to B</li>
+<li><code>merge</code>, a merged <code>Observable</code> subscribes to each of the sequence, when it's inner <code>Observable</code>s emmits events, it notify the outter observers. <a href="http://rxmarbles.com/#merge"><code>merge</code> in RxMarbles</a></li>
+<li><code>combineLatest</code>, <a href="http://rxmarbles.com/#combineLatest"><code>combineLatest</code> in RxMarbles</a></li>
+<li><code>zip</code>, it waitied for each to emit a new value, just like a zipper <a href="http://rxmarbles.com/#zip"><code>zip</code></a></li>
+<li><code>withLatestFrom</code>, <code>A.withLatestFrom(B)</code> when A emits a event, it will take the B's latest value</li>
+<li><code>sample</code></li>
+<li><code>amb</code>, <code>A.amb(B)</code> who comes last, who get unsubscribed</li>
+<li><code>switchLatest</code>, images are better than words</li>
+</ul>
+<p><img alt="" src="../rxswift/06-switchLatest.png" /></p>
+<ul>
+<li><code>reduce</code>, like normal <code>reduce</code> in Swift, but for <code>Observable</code>s, but it'll only be called when the <code>Observable</code> completed</li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">source</span> <span class="p">=</span> <span class="n">Observable</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nv">observable</span> <span class="p">=</span> <span class="n">source</span><span class="p">.</span><span class="bp">reduce</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">accumulator</span><span class="p">:</span> <span class="o">+</span><span class="p">)</span>
+<span class="n">observable</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">onNext</span><span class="p">:</span> <span class="p">{</span> <span class="n">value</span> <span class="k">in</span>
+  <span class="bp">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="p">})</span> <span class="c1">// 25</span>
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li><code>scan</code></li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">source</span> <span class="p">=</span> <span class="n">Observable</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nv">observable</span> <span class="p">=</span> <span class="n">source</span><span class="p">.</span><span class="n">scan</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">accumulator</span><span class="p">:</span> <span class="o">+</span><span class="p">)</span>
+<span class="n">observable</span><span class="p">.</span><span class="n">subscribe</span><span class="p">(</span><span class="n">onNext</span><span class="p">:</span> <span class="p">{</span> <span class="n">value</span> <span class="k">in</span>
+  <span class="bp">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="p">})</span> <span class="c1">// 1 4 9 16 25</span>
+</pre></div>
+</td></tr></table>
+
 <h2 id="schedulers">Schedulers</h2>
 <p>Just like dispatch queues.</p>
 <h2 id="credits">Credits</h2>
