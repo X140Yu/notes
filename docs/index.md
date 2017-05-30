@@ -8,6 +8,9 @@ My [Blog](https://x140yu.github.io)
 
 This site's articles are all under [CC Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) Licence.
 
+If you thought my notes help you a lot, why not buy me a drink :]
+
+![](images/zhifubao.png)
 
 
 ```bash
@@ -16,3 +19,5 @@ mkdocs serve
 # deploy to github pages
 mkdocs gh-deploy
 ```
+
+
