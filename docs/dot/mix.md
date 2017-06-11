@@ -10,11 +10,33 @@
 
 >那么我是如何对待别人的“垃圾代码”的呢？你也许会很惊讶我的做法：我尽量不动它们！
 
+- [技术人员的发展之路](http://coolshell.cn/articles/17583.html)
+
+>如果你不幸呆在了一个搬砖的地方，天天被业务压得喘不过气来，我建议你宁可让你的项目延期被老板骂，也要把时间挤出来努力学习基础知识，多掌握一些技术（很多技术在思路上是相通的），因为，比起你的个人未来，项目延期被老板骂绩效不好拿不到奖金，都不是什么事。
 
 ## Life
+
+- [Always Be Learning](https://medium.com/the-year-of-the-looking-glass/always-be-learning-a4ed3fe09f26)
+
+>I’ve also come to realize that the value from reading doesn’t come from quantity. I used to think it was way better to read twenty books than two. Now, I think what matters most is how much you retain. It’s a shame how many thousands of books I’ve completed that I can’t really tell you very much about. Nowadays, when I come across a book that pushes my thinking, I slow down. I highlight passages and take notes. Even before I’ve finished the book, I’m usually re-reading old passages to try and make sure I’ve internalized the lessons. For this reason, it can take me a long time to finish a book. (Sapiens took me three months; Made to Stick took me over a year.) Last year, I only read a handful of books, but each one had a much greater impact on my worldview.
 
 - [避免决策疲劳]()
 
 >避免决策疲劳。精力有限，无论大小决策都需要精力，不要纠结于那些小事（比如今天穿什么）。锻炼身体。转型过程可能比较漫长，身体一定要撑住。冥想。有奇效。
+
+- [How to Think About Your Career
+](https://medium.com/the-year-of-the-looking-glass/how-to-think-about-your-career-abf5300eba08)
+
+>If you find it hard to wake up excited about going to work in the mornings, ask yourself why.
+
+>If you look back on your last six months and you can’t point to anything that’s been hard for you, question whether you are challenging yourself enough.
+
+>If you find yourself constantly looking for other people to tell you how awesome you’re doing, consider if you’re shortchanging your own growth and development.
+
+>If your manager is not giving you the support or coaching you’d like, tell her how you’d like to be supported or coached.
+
+>If working at your current company is not aligned with your long-term goals or values, consider making a move.
+
+>If you’ve never thought about where you’d like to be in three years, sit down and think about it.
 
 
