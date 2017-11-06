@@ -10,6 +10,7 @@ pages:
   - Home: index.md
   - iOS:
     - 'Xcode': 'ios/xcode.md'
+    - 'Mix': 'ios/mix.md'
   - Swift:
     - 'FRP basics': 'swift/frp-in-swift.md'
     - 'RxSwift': 'swift/rxswift.md'
