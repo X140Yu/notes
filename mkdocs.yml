@@ -15,6 +15,7 @@ pages:
     - 'FRP basics': 'swift/frp-in-swift.md'
     - 'RxSwift': 'swift/rxswift.md'
     - 'Memory management': 'swift/memory-management.md'
+    - 'Swift and Objective-C': 'swift/swift-and-objc.md'
     - '奇技淫巧': 'swift/magic-in-swift.md'
   - FrontEnd:
     - 'HTML': 'fe/01-HTML-Basics.md'
