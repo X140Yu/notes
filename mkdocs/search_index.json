@@ -286,6 +286,36 @@
             "title": "\u5230\u5e95\u4f7f\u7528 weak \u8fd8\u662f unowned\uff1f"
         },
         {
+            "location": "/swift/swift-and-objc/",
+            "text": "Swift \u548c Objective-C \u6df7\u7f16\n\n\n\u5927\u4f53\u4e0a\u6765\u8bf4\uff0c\u770b\n\u8fd9\u4e2a\n\u6587\u6863\u5c31\u80fd\u89e3\u51b3\u5927\u90e8\u5206\u95ee\u9898\n\n\nSwift \u5f15 Objective-C\n\n\n\u628a\u5bf9\u5e94\u7684 Objective-C \u5934\u6587\u4ef6\u653e\u5165 \nProductModuleName-Bridging-Header.h\n \u91cc\n\n\n\u4e00\u4e9b\u597d\u7528\u7684\u5173\u952e\u5b57\n\n\n\n\nNS_SWIFT_NAME\n\n\nNS_REFINED_FOR_SWIFT\n\n\nNS_SWIFT_UNAVAILABLE\n\n\n\n\nObjective-C \u5f15 Swift\n\n\n#import \"ProductModuleName-Swift.h\"\n\n\n\u4ec0\u4e48\u4e1c\u897f\u4e0d\u80fd\u88ab Objective-C \u770b\u5230\n\n\n\u770b\u8fd9\u91cc",
+            "title": "Swift and Objective-C"
+        },
+        {
+            "location": "/swift/swift-and-objc/#swift-objective-c",
+            "text": "\u5927\u4f53\u4e0a\u6765\u8bf4\uff0c\u770b \u8fd9\u4e2a \u6587\u6863\u5c31\u80fd\u89e3\u51b3\u5927\u90e8\u5206\u95ee\u9898",
+            "title": "Swift \u548c Objective-C \u6df7\u7f16"
+        },
+        {
+            "location": "/swift/swift-and-objc/#swift-objective-c_1",
+            "text": "\u628a\u5bf9\u5e94\u7684 Objective-C \u5934\u6587\u4ef6\u653e\u5165  ProductModuleName-Bridging-Header.h  \u91cc",
+            "title": "Swift \u5f15 Objective-C"
+        },
+        {
+            "location": "/swift/swift-and-objc/#_1",
+            "text": "NS_SWIFT_NAME  NS_REFINED_FOR_SWIFT  NS_SWIFT_UNAVAILABLE",
+            "title": "\u4e00\u4e9b\u597d\u7528\u7684\u5173\u952e\u5b57"
+        },
+        {
+            "location": "/swift/swift-and-objc/#objective-c-swift",
+            "text": "#import \"ProductModuleName-Swift.h\"",
+            "title": "Objective-C \u5f15 Swift"
+        },
+        {
+            "location": "/swift/swift-and-objc/#objective-c",
+            "text": "\u770b\u8fd9\u91cc",
+            "title": "\u4ec0\u4e48\u4e1c\u897f\u4e0d\u80fd\u88ab Objective-C \u770b\u5230"
+        },
+        {
             "location": "/swift/magic-in-swift/",
             "text": "\u5947\u6280\u6deb\u5de7 in Swift\n\n\nDispatchWorkItem\n\n\nCancel a delayed async GCD task using \nDispatchWorkItem\n if you don't want it execute anymore.\n\n\n1\n2\n3\n4\n5\n6\n7\nlet\n \nitem\n \n=\n \nDispatchWorkItem\n \n{\n\n    \n/// do something \n\n\n}\n\n\n// \n\n\nDispatchQueue\n.\nmain\n.\nasyncAfter\n(\ndeadline\n:\n \n.\nnow\n()\n \n+\n \n3\n,\n \nexecute\n:\n \nitem\n)\n\n\n// cancel if needed\n\n\nitem\n.\ncancel\n()\n\n\n\n\n\n\n\nDefer\n\n\ndefer\n \u7684\u6267\u884c\u662f\u5728\u5f53\u524d scrope \u6267\u884c\u4e4b\u540e\n\n\n\u5b89\u5168\u5730\u91ca\u653e\u8d44\u6e90\n\n\n\u6709\u4e86 \ndefer\n \u4ee5\u540e\uff0c\u518d\u4e5f\u4e0d\u6015\u8d44\u6e90\u5fd8\u8bb0\u91ca\u653e\u7684\u95ee\u9898\u4e86\uff01\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\nfunc\n \nresizeImage\n(\nurl\n:\n \nNSURL\n)\n \n->\n \nUIImage\n?\n \n{\n\n    \n// ...\n\n    \nlet\n \ndataSize\n:\n \nInt\n \n=\n \n...\n\n    \nlet\n \ndestData\n \n=\n \nUnsafeMutablePointer\n<\nUInt8\n>.\nalloc\n(\ndataSize\n)\n\n\n    \ndefer\n \n{\n\n\n        \n// \u4e0d\u7ba1\u8fd9\u4e2a\u4e0b\u9762\u8d70\u5230\u54ea\u4e2a\u5206\u652f\uff0c\u53ea\u8981\u5f53\u524d\u51fd\u6570\u6267\u884c\u5b8c\uff0cdestData \u90fd\u4f1a\u88ab\u91ca\u653e\n\n\n        \ndestData\n.\ndealloc\n(\ndataSize\n)\n\n\n    \n}\n\n\n\n    \nvar\n \ndestBuffer\n \n=\n \nvImage_Buffer\n(\ndata\n:\n \ndestData\n,\n \n...)\n\n\n    \n// scale the image from sourceBuffer to destBuffer\n\n    \nvar\n \nerror\n \n=\n \nvImageScale_ARGB8888\n(&\nsourceBuffer\n,\n \n&\ndestBuffer\n,\n \n...)\n\n    \nguard\n \nerror\n \n==\n \nkvImageNoError\n \n        \nelse\n \n{\n \nreturn\n \nnil\n \n}\n\n\n    \n// create a CGImage from the destBuffer\n\n    \nguard\n \nlet\n \ndestCGImage\n \n=\n \nvImageCreateCGImageFromBuffer\n(&\ndestBuffer\n,\n \n&\nformat\n,\n \n...)\n \n        \nelse\n \n{\n \nreturn\n \nnil\n \n}\n\n    \n// ...\n\n\n}\n\n\n\n\n\n\n\n\u4e00\u4e2a\u5c0f trick\n\n\n\u5b9e\u73b0\u7c7b\u4f3c C \u4e2d\u7684 \nx++\n \u6548\u679c\uff0c\u5de7\u5999\u5730\u5229\u7528\u4e86 \ndefer\n \u7684\u5ef6\u65f6\u7279\u6027\u3002\u4e5f\u5c31\u662f\u5728\u51fd\u6570\u8fd4\u56de\u4e4b\u540e\uff0c\nx\n \u7684\u503c\u624d\u4f1a\u53d1\u751f\u6539\u53d8\u3002\n\n\n1\n2\n3\n4\n5\n6\npostfix\n \nfunc\n \n++\n(\ninout\n \nx\n:\n \nInt\n)\n \n->\n \nInt\n \n{\n\n    \n// fuck temp value\n\n    \nlet\n \ncurrent\n \n=\n \nx\n\n    \nx\n \n+=\n \n1\n\n    \nreturn\n \ncurrent\n\n\n}\n\n\n\n\n\n\n\n1\n2\n3\n4\n5\npostfix\n \nfunc\n \n++\n(\ninout\n \nx\n:\n \nInt\n)\n \n->\n \nInt\n \n{\n\n    \n// that's better\n\n\n    \ndefer\n \n{\n \nx\n \n+=\n \n1\n \n}\n\n\n    \nreturn\n \nx\n\n\n}\n\n\n\n\n\n\n\nreference\n\n\n\n\nhttp://nshipster.com/guard-and-defer/",
             "title": "\u5947\u6280\u6deb\u5de7"
