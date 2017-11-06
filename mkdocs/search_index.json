@@ -32,13 +32,8 @@
         },
         {
             "location": "/ios/mix/",
-            "text": "Core Animation\n\n\nCALayer\n\n\nCALayer \u7684\u6709\u4e9b\u5c5e\u6027\u6539\u53d8\u90fd\u662f\u81ea\u5e26\u9690\u5f0f animation \u7684\uff0c\u5982\u679c\u9700\u8981\u53bb\u6389\uff0c\u9700\u8981 \n\n\n1\n2\n3\n4\nCATransaction\n.\nbegin\n()\n\n\nCATransaction\n.\nsetDisableActions\n(\ntrue\n)\n\n\n/// a.frame = ...\n\n\nCATransaction\n.\ncommit\n()",
+            "text": "CALayer\n\n\nCALayer \u7684\u6709\u4e9b\u5c5e\u6027\u6539\u53d8\u90fd\u662f\u81ea\u5e26\u9690\u5f0f animation \u7684\uff0c\u5982\u679c\u9700\u8981\u53bb\u6389\uff0c\u9700\u8981 \n\n\n1\n2\n3\n4\nCATransaction\n.\nbegin\n()\n\n\nCATransaction\n.\nsetDisableActions\n(\ntrue\n)\n\n\n/// a.frame = ...\n\n\nCATransaction\n.\ncommit\n()",
             "title": "Mix"
-        },
-        {
-            "location": "/ios/mix/#core-animation",
-            "text": "",
-            "title": "Core Animation"
         },
         {
             "location": "/ios/mix/#calayer",
