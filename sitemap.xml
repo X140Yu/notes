@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,14 +12,36 @@
     
         
     <url>
+     <loc>/read/effective-objc/</loc>
+     <lastmod>2017-11-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/ios/xcode/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ios/viewController/</loc>
+     <lastmod>2017-11-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ios/lock/</loc>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/ios/mix/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -29,31 +51,31 @@
         
     <url>
      <loc>/swift/frp-in-swift/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/swift/rxswift/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/swift/memory-management/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/swift/swift-and-objc/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/swift/magic-in-swift/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -63,13 +85,13 @@
         
     <url>
      <loc>/fe/01-HTML-Basics/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/fe/02-CSS-Basics/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -78,7 +100,7 @@
     
     <url>
      <loc>/dot/mix/</loc>
-     <lastmod>2017-11-06</lastmod>
+     <lastmod>2017-11-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
