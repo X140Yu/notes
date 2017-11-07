@@ -8,8 +8,12 @@ extra:
       link: 'https://github.com/x140yu'
 pages:
   - Home: index.md
+  - Read:
+    - 'Effective Objective-C': 'read/effective-objc.md'
   - iOS:
     - 'Xcode': 'ios/xcode.md'
+    - 'ViewController': 'ios/viewController.md'
+    - 'Lock': 'ios/lock.md'
     - 'Mix': 'ios/mix.md'
   - Swift:
     - 'FRP basics': 'swift/frp-in-swift.md'
