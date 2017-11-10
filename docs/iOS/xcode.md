@@ -5,7 +5,19 @@
 
 这个教程不错，[Creating Custom Xcode Templates](https://robots.thoughtbot.com/creating-custom-xcode-templates)
 
-## Useful key bindings
+## 一些常用快捷键
 
-- `option + command + [` move line up
-- `option + command + ]` move line down
+| Key combination      | Action                                         |
+| -------------------- | ---------------------------------------------- |
+| ⇧ + ⌘ + O            | Open file quickly                              |
+| ⌘ + 0                | toggle navigator                               |
+| ⇧ + ⌘ + Y            | toggle debug                                   |
+| ⌥ + ⌘ + 0            | Toggle utlities area                           |
+| ⇧ + ⌘ + F            | Find in current project                        |
+| ⌃ + 6                | Quickly find a method in currently open file   |
+| ⌃ + ⌘ + <-/->        | Open previous/next file in opened file history |
+| ⌘ + Z                | Undo last action                               |
+| ⇧ + ⌘ + Z            | Redo last action                               |
+| ⌥ + ⌘ + ]/[          | Move current line down/up                      |
+| option + command + [ | move line up                                   |
+| option + command + ] | move line down                                 |
