@@ -24,4 +24,3 @@ pages:
   - FrontEnd:
     - 'HTML': 'fe/01-HTML-Basics.md'
     - 'CSS': 'fe/02-CSS-Basics.md'
-  - dots: 'dot/mix.md'

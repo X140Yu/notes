@@ -1,5 +1,9 @@
 # Xcode
 
+## 模拟器技巧
+
+- [文章](https://www.appcoda.com/ios-simulator-tips-tricks/)
+
 ## File Templete
 使用 Xcode 的文件模板可以在创建文件的时候轻松创建一些相同的模板代码，就像你在创建一个 ViewController 的时候一样。
 
