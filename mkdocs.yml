@@ -1,7 +1,9 @@
 site_name: X140Yu's notes
 theme: 'material'
 markdown_extensions:
-  - codehilite(linenums=true)
+  - codehilite:
+      linenums: true
+
 extra:
   social:
     - type: 'github'
