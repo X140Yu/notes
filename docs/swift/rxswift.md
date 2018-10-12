@@ -1,4 +1,4 @@
-# [RxSwift](https://github.com/ReactiveX/RxSwift)
+# RxSwift
 
 ## Basic
 

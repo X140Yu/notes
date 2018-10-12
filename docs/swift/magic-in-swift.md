@@ -1,6 +1,7 @@
-# 奇技淫巧 in Swift
+# 奇技淫巧
 
 ## DispatchWorkItem
+
 Cancel a delayed async GCD task using `DispatchWorkItem` if you don't want it execute anymore.
 
 ```swift
@@ -66,5 +67,5 @@ postfix func ++(inout x: Int) -> Int {
 ```
 
 ### reference
-- http://nshipster.com/guard-and-defer/
 
+- http://nshipster.com/guard-and-defer/
