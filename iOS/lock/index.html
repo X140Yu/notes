@@ -342,6 +342,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pthread_mutex_t" title="pthread_mutex_t" class="md-nav__link">
+    pthread_mutex_t
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pthread_mutex_default" title="PTHREAD_MUTEX_DEFAULT" class="md-nav__link">
+    PTHREAD_MUTEX_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pthread_mutex_recursive" title="PTHREAD_MUTEX_RECURSIVE" class="md-nav__link">
+    PTHREAD_MUTEX_RECURSIVE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nslock" title="NSLock" class="md-nav__link">
+    NSLock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nsrecursivelock" title="NSRecursiveLock" class="md-nav__link">
+    NSRecursiveLock
+  </a>
+  
+</li>
+      
       
       
       
@@ -613,6 +654,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pthread_mutex_t" title="pthread_mutex_t" class="md-nav__link">
+    pthread_mutex_t
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pthread_mutex_default" title="PTHREAD_MUTEX_DEFAULT" class="md-nav__link">
+    PTHREAD_MUTEX_DEFAULT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pthread_mutex_recursive" title="PTHREAD_MUTEX_RECURSIVE" class="md-nav__link">
+    PTHREAD_MUTEX_RECURSIVE
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nslock" title="NSLock" class="md-nav__link">
+    NSLock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nsrecursivelock" title="NSRecursiveLock" class="md-nav__link">
+    NSRecursiveLock
+  </a>
+  
+</li>
+      
       
       
       
@@ -647,6 +729,14 @@
 </td></tr></table>
 
 <p>关于 Swift 中等同的调用方式，可以参考<a href="http://swifter.tips/lock/">这篇文章</a></p>
+<h2 id="pthread_mutex_t">pthread_mutex_t</h2>
+<h3 id="pthread_mutex_default">PTHREAD_MUTEX_DEFAULT</h3>
+<h3 id="pthread_mutex_recursive">PTHREAD_MUTEX_RECURSIVE</h3>
+<p>允许同一个线程在未释放其拥有的锁时反复对该锁进行加锁操作。</p>
+<h2 id="nslock">NSLock</h2>
+<p><code>== pthread_mutex_t(.default)</code></p>
+<h2 id="nsrecursivelock">NSRecursiveLock</h2>
+<p><code>== pthread_mutex_t(.recursive)</code></p>
                 
                   
                 
