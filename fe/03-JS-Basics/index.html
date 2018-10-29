@@ -36,7 +36,7 @@
     
     
       
-        <title>Thread safety - X140Yu's notes</title>
+        <title>03 JS Basics - X140Yu's notes</title>
       
     
     
@@ -71,7 +71,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#thread-safety" tabindex="1" class="md-skip">
+      <a href="../../#javascript" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -97,7 +97,7 @@
                 X140Yu's notes
               </span>
               <span class="md-header-nav__topic">
-                Thread safety
+                03 JS Basics
               </span>
             
           
@@ -238,10 +238,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Fe
@@ -259,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../fe/01-HTML-Basics/" title="HTML" class="md-nav__link">
+    <a href="../01-HTML-Basics/" title="HTML" class="md-nav__link">
       HTML
     </a>
   </li>
@@ -271,9 +273,81 @@
 
 
   <li class="md-nav__item">
-    <a href="../../fe/02-CSS-Basics/" title="02 CSS Basics" class="md-nav__link">
+    <a href="../02-CSS-Basics/" title="02 CSS Basics" class="md-nav__link">
       02 CSS Basics
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        03 JS Basics
+      </label>
+    
+    <a href="./" title="03 JS Basics" class="md-nav__link md-nav__link--active">
+      03 JS Basics
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#javascript" title="JavaScript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascript_1" title="JavaScript 的引入方式" class="md-nav__link">
+    JavaScript 的引入方式
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-json-file" title="Load JSON file" class="md-nav__link">
+    Load JSON file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -286,12 +360,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       iOS
@@ -307,100 +379,9 @@
           
           
 
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Thread safety
-      </label>
-    
-    <a href="./" title="Thread safety" class="md-nav__link md-nav__link--active">
-      Thread safety
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#synchronized" title="@synchronized" class="md-nav__link">
-    @synchronized
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pthread_mutex_t" title="pthread_mutex_t" class="md-nav__link">
-    pthread_mutex_t
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pthread_mutex_default" title="PTHREAD_MUTEX_DEFAULT" class="md-nav__link">
-    PTHREAD_MUTEX_DEFAULT
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pthread_mutex_recursive" title="PTHREAD_MUTEX_RECURSIVE" class="md-nav__link">
-    PTHREAD_MUTEX_RECURSIVE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nslock" title="NSLock" class="md-nav__link">
-    NSLock
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nsrecursivelock" title="NSRecursiveLock" class="md-nav__link">
-    NSRecursiveLock
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
 
   <li class="md-nav__item">
-    <a href="../mix/" title="Mix" class="md-nav__link">
+    <a href="../../iOS/mix/" title="Mix" class="md-nav__link">
       Mix
     </a>
   </li>
@@ -412,7 +393,19 @@
 
 
   <li class="md-nav__item">
-    <a href="../viewController/" title="viewController" class="md-nav__link">
+    <a href="../../iOS/thread safety/" title="Thread safety" class="md-nav__link">
+      Thread safety
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../iOS/viewController/" title="viewController" class="md-nav__link">
       viewController
     </a>
   </li>
@@ -424,7 +417,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../xcode/" title="Xcode" class="md-nav__link">
+    <a href="../../iOS/xcode/" title="Xcode" class="md-nav__link">
       Xcode
     </a>
   </li>
@@ -641,37 +634,29 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#synchronized" title="@synchronized" class="md-nav__link">
-    @synchronized
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pthread_mutex_t" title="pthread_mutex_t" class="md-nav__link">
-    pthread_mutex_t
+  <a href="#javascript" title="JavaScript" class="md-nav__link">
+    JavaScript
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pthread_mutex_default" title="PTHREAD_MUTEX_DEFAULT" class="md-nav__link">
-    PTHREAD_MUTEX_DEFAULT
+  <a href="#javascript_1" title="JavaScript 的引入方式" class="md-nav__link">
+    JavaScript 的引入方式
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pthread_mutex_recursive" title="PTHREAD_MUTEX_RECURSIVE" class="md-nav__link">
-    PTHREAD_MUTEX_RECURSIVE
+  <a href="#load-json-file" title="Load JSON file" class="md-nav__link">
+    Load JSON file
   </a>
   
 </li>
@@ -680,18 +665,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#nslock" title="NSLock" class="md-nav__link">
-    NSLock
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nsrecursivelock" title="NSRecursiveLock" class="md-nav__link">
-    NSRecursiveLock
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -712,31 +688,72 @@
               
                 
                 
-                <h1 id="thread-safety">Thread safety</h1>
-<p><a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Multithreading/ThreadSafety/ThreadSafety.html">doc</a></p>
-<h2 id="synchronized"><code>@synchronized</code></h2>
-<p>其实等同于下面的方法</p>
+                  <h1>03 JS Basics</h1>
+                
+                <h2 id="javascript">JavaScript</h2>
+<h3 id="javascript_1">JavaScript 的引入方式</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">func</span> <span class="nf">mySynchronized</span><span class="p">(</span><span class="nl">anObj</span><span class="p">:</span> <span class="n">AnyObject</span><span class="o">!</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">objc_sync_enter</span><span class="p">(</span><span class="n">anObj</span><span class="p">)</span>
-    <span class="c1">// thread safe</span>
-    <span class="n">objc_sync_exit</span><span class="p">(</span><span class="n">anObj</span><span class="p">)</span>
-<span class="p">}</span>
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;xxx.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- or --&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+
+  <span class="nx">raw</span> <span class="nx">js</span>
+
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </td></tr></table>
 
-<p>关于 Swift 中等同的调用方式，可以参考<a href="http://swifter.tips/lock/">这篇文章</a></p>
-<h2 id="pthread_mutex_t">pthread_mutex_t</h2>
-<h3 id="pthread_mutex_default">PTHREAD_MUTEX_DEFAULT</h3>
-<h3 id="pthread_mutex_recursive">PTHREAD_MUTEX_RECURSIVE</h3>
-<p>允许同一个线程在未释放其拥有的锁时反复对该锁进行加锁操作。</p>
-<h2 id="nslock">NSLock</h2>
-<p><code>== pthread_mutex_t(.default)</code></p>
-<h2 id="nsrecursivelock">NSRecursiveLock</h2>
-<p><code>== pthread_mutex_t(.recursive)</code></p>
+<h4 id="load-json-file">Load JSON file</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">function</span> <span class="nx">loadJSON</span><span class="p">(</span><span class="nx">fileName</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>   
+  <span class="kd">var</span> <span class="nx">xobj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+  <span class="nx">xobj</span><span class="p">.</span><span class="nx">overrideMimeType</span><span class="p">(</span><span class="s2">&quot;application/json&quot;</span><span class="p">);</span>
+  <span class="nx">xobj</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">fileName</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+  <span class="nx">xobj</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">xobj</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nx">xobj</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="s2">&quot;200&quot;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">callback</span><span class="p">(</span><span class="nx">xobj</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+  <span class="nx">xobj</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// index.json</span>
+<span class="c1">// {&#39;abc&#39;: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]}</span>
+
+<span class="nx">loadJSON</span><span class="p">(</span><span class="s1">&#39;index.json&#39;</span><span class="p">,</span> <span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">actual_JSON</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+
+  <span class="kd">let</span> <span class="nx">ab</span> <span class="o">=</span> <span class="nx">actual_JSON</span><span class="p">.</span><span class="nx">abc</span><span class="p">;</span>
+<span class="p">});</span>
+</pre></div>
+</td></tr></table>
                 
                   
                 
@@ -757,7 +774,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../fe/02-CSS-Basics/" title="02 CSS Basics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../02-CSS-Basics/" title="02 CSS Basics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -772,7 +789,7 @@
           </a>
         
         
-          <a href="../mix/" title="Mix" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../iOS/mix/" title="Mix" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
