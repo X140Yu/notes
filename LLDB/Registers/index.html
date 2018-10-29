@@ -36,7 +36,7 @@
     
     
       
-        <title>奇技淫巧 - X140Yu's notes</title>
+        <title>Registers - X140Yu's notes</title>
       
     
     
@@ -71,7 +71,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#_1" tabindex="1" class="md-skip">
+      <a href="../../#registers" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -97,7 +97,7 @@
                 X140Yu's notes
               </span>
               <span class="md-header-nav__topic">
-                奇技淫巧
+                Registers
               </span>
             
           
@@ -178,10 +178,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       LLDB
@@ -199,7 +201,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LLDB/Cheat Sheet/" title="Cheat Sheet" class="md-nav__link">
+    <a href="../Cheat Sheet/" title="Cheat Sheet" class="md-nav__link">
       Cheat Sheet
     </a>
   </li>
@@ -209,11 +211,144 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../LLDB/Registers/" title="Registers" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Registers
+      </label>
+    
+    <a href="./" title="Registers" class="md-nav__link md-nav__link--active">
       Registers
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#assembly-register-calling-convention" title="Assembly Register Calling Convention" class="md-nav__link">
+    Assembly Register Calling Convention
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registers-in-x86_64" title="Registers in x86_64" class="md-nav__link">
+    Registers in x86_64
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rax" title="RAX" class="md-nav__link">
+    RAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rip" title="RIP" class="md-nav__link">
+    RIP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registers-in-objective-c-swift" title="Registers in Objective-C &amp; Swift" class="md-nav__link">
+    Registers in Objective-C &amp; Swift
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective-c-and-swift-nsobject-subclass" title="Objective-C and Swift NSObject subclass" class="md-nav__link">
+    Objective-C and Swift NSObject subclass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pure-swift" title="Pure Swift" class="md-nav__link">
+    Pure Swift
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-rdi" title="Read RDI" class="md-nav__link">
+    Read RDI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uilabel-settext" title="替换所有 [UILabel setText:] 的方法调用参数" class="md-nav__link">
+    替换所有 [UILabel setText:] 的方法调用参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook-all-button-action-events" title="hook all button action events" class="md-nav__link">
+    hook all button action events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-viewcontroller-as-they-appear" title="print viewController as they appear" class="md-nav__link">
+    print viewController as they appear
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -223,7 +358,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LLDB/break on swift block/" title="Break on swift block" class="md-nav__link">
+    <a href="../break on swift block/" title="Break on swift block" class="md-nav__link">
       Break on swift block
     </a>
   </li>
@@ -235,7 +370,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LLDB/lldb_commands/" title="Lldb commands" class="md-nav__link">
+    <a href="../lldb_commands/" title="Lldb commands" class="md-nav__link">
       Lldb commands
     </a>
   </li>
@@ -247,7 +382,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../LLDB/stack/" title="Stack" class="md-nav__link">
+    <a href="../stack/" title="Stack" class="md-nav__link">
       Stack
     </a>
   </li>
@@ -490,12 +625,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Swift
@@ -513,7 +646,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../frp-in-swift/" title="Frp in swift" class="md-nav__link">
+    <a href="../../swift/frp-in-swift/" title="Frp in swift" class="md-nav__link">
       Frp in swift
     </a>
   </li>
@@ -523,83 +656,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        奇技淫巧
-      </label>
-    
-    <a href="./" title="奇技淫巧" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../swift/magic-in-swift/" title="奇技淫巧" class="md-nav__link">
       奇技淫巧
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#dispatchworkitem" title="DispatchWorkItem" class="md-nav__link">
-    DispatchWorkItem
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#defer" title="Defer" class="md-nav__link">
-    Defer
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" title="安全地释放资源" class="md-nav__link">
-    安全地释放资源
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#trick" title="一个小 trick" class="md-nav__link">
-    一个小 trick
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reference" title="reference" class="md-nav__link">
-    reference
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -609,7 +670,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../memory-management/" title="Swift 中的内存管理" class="md-nav__link">
+    <a href="../../swift/memory-management/" title="Swift 中的内存管理" class="md-nav__link">
       Swift 中的内存管理
     </a>
   </li>
@@ -621,7 +682,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../rxswift/" title="RxSwift" class="md-nav__link">
+    <a href="../../swift/rxswift/" title="RxSwift" class="md-nav__link">
       RxSwift
     </a>
   </li>
@@ -633,7 +694,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../swift-and-objc/" title="Swift and objc" class="md-nav__link">
+    <a href="../../swift/swift-and-objc/" title="Swift and objc" class="md-nav__link">
       Swift and objc
     </a>
   </li>
@@ -665,38 +726,99 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dispatchworkitem" title="DispatchWorkItem" class="md-nav__link">
-    DispatchWorkItem
+  <a href="#assembly-register-calling-convention" title="Assembly Register Calling Convention" class="md-nav__link">
+    Assembly Register Calling Convention
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#defer" title="Defer" class="md-nav__link">
-    Defer
+  <a href="#registers-in-x86_64" title="Registers in x86_64" class="md-nav__link">
+    Registers in x86_64
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" title="安全地释放资源" class="md-nav__link">
-    安全地释放资源
+  <a href="#rax" title="RAX" class="md-nav__link">
+    RAX
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#trick" title="一个小 trick" class="md-nav__link">
-    一个小 trick
+  <a href="#rip" title="RIP" class="md-nav__link">
+    RIP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registers-in-objective-c-swift" title="Registers in Objective-C &amp; Swift" class="md-nav__link">
+    Registers in Objective-C &amp; Swift
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective-c-and-swift-nsobject-subclass" title="Objective-C and Swift NSObject subclass" class="md-nav__link">
+    Objective-C and Swift NSObject subclass
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reference" title="reference" class="md-nav__link">
-    reference
+  <a href="#pure-swift" title="Pure Swift" class="md-nav__link">
+    Pure Swift
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-rdi" title="Read RDI" class="md-nav__link">
+    Read RDI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uilabel-settext" title="替换所有 [UILabel setText:] 的方法调用参数" class="md-nav__link">
+    替换所有 [UILabel setText:] 的方法调用参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hook-all-button-action-events" title="hook all button action events" class="md-nav__link">
+    hook all button action events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print-viewcontroller-as-they-appear" title="print viewController as they appear" class="md-nav__link">
+    print viewController as they appear
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -722,29 +844,135 @@
               
                 
                 
-                <h1 id="_1">奇技淫巧</h1>
-<h2 id="dispatchworkitem">DispatchWorkItem</h2>
-<p>Cancel a delayed async GCD task using <code>DispatchWorkItem</code> if you don't want it execute anymore.</p>
+                <h1 id="registers">Registers</h1>
+<h2 id="assembly-register-calling-convention">Assembly Register Calling Convention</h2>
+<p>x86_64 is a 64-bit architecture, which means every address can hold up to 64 1s or 0s.</p>
+<p>x86_64 is the architecture most likely used on your macOS computer.</p>
+<p>ARM64 architecture is used on mobile devices such as your iPhone where limiting energy consumption is critical.</p>
+<h2 id="registers-in-x86_64">Registers in x86_64</h2>
+<p>RAX, RBX, RCX, RDX, RDI, RSI, RSP, RBP and R8 through R15.</p>
+<table>
+<thead>
+<tr>
+<th>arg1</th>
+<th>arg2</th>
+<th>arg3</th>
+<th>arg4</th>
+<th>arg5</th>
+<th>arg6</th>
+<th>argx...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RDI</td>
+<td>RSI</td>
+<td>RDX</td>
+<td>RCX</td>
+<td>R8</td>
+<td>R9</td>
+<td>R10+</td>
+</tr>
+</tbody>
+</table>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># read registers</span>
+<span class="o">(</span>lldb<span class="o">)</span> register <span class="nb">read</span>
+</pre></div>
+</td></tr></table>
+
+<h3 id="rax">RAX</h3>
+<p>Stores the return value.</p>
+<h3 id="rip">RIP</h3>
+<p>RIP register 存的是方法的地址，通过修改 RIP 寄存器的器的值可以动态修改方法的实现，</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 1. 在方法定义那行下断点</span>
+
+<span class="c1"># 查看当前方法的地址（非必须）</span>
+<span class="o">(</span>lldb<span class="o">)</span> cpx <span class="nv">$rip</span>
+&gt; <span class="o">(</span>unsigned long<span class="o">)</span> <span class="nv">$2</span> <span class="o">=</span> 0x0000000100007b80
+
+<span class="c1"># 2. 搜索想要替换的方法，其中的 range 左边就是方法的起始地址</span>
+<span class="o">(</span>lldb<span class="o">)</span> image lookup -rvn <span class="s1">&#39;^Register.*goodMethod&#39;</span>
+&gt; Symbol: <span class="nv">id</span> <span class="o">=</span> <span class="o">{</span>0x00000308<span class="o">}</span>, <span class="nv">range</span> <span class="o">=</span> <span class="o">[</span>0x0000000100007c50-0x0000000100007d20<span class="o">)</span>, <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;Registers.AppDelegate.goodMethod() -&gt; ()&quot;</span>, <span class="nv">mangled</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$S9Registers11AppDelegateC10goodMethodyyF</span><span class="s2">&quot;</span>
+
+<span class="c1"># 3. 修改 RIP 的值</span>
+<span class="o">(</span>lldb<span class="o">)</span> register write rip 0x0000000100007c50
+</pre></div>
+</td></tr></table>
+
+<p><img alt="image-20181002093019589" src="../assets/image-20181002093019589.png" /></p>
+<h2 id="registers-in-objective-c-swift">Registers in Objective-C &amp; Swift</h2>
+<p>RAX: used for return values, both Objective-C &amp; Swift</p>
+<h3 id="objective-c-and-swift-nsobject-subclass">Objective-C and Swift NSObject subclass</h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">label</span> <span class="nl">setText</span><span class="p">:</span><span class="s">@&quot;abc&quot;</span><span class="p">];</span>
+<span class="c1">// equals</span>
+<span class="n">objc_msgSend</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="s">&quot;setText:&quot;</span><span class="p">,</span> <span class="s">@&quot;abc&quot;</span><span class="p">)</span>
+
+<span class="cm">/*</span>
+<span class="cm">RDI: the reference of the calling object, label</span>
+<span class="cm">RSI: Selector, setText:</span>
+<span class="cm">RDX: the first parameter, @&quot;abc&quot;</span>
+<span class="cm">RCX: second parameter</span>
+<span class="cm">...</span>
+<span class="cm">*/</span>
+</pre></div>
+</td></tr></table>
+
+<blockquote>
+<p>Why you’ll never see the objc_msgSend in the LLDB backtrace?</p>
+</blockquote>
+<p>The <code>objc_msgSend</code> family of functions perfoms a <code>jmp</code>, or <code>jump</code> opcode command in assembly. Which is called tail call optimization.</p>
+<h3 id="pure-swift">Pure Swift</h3>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">let</span> <span class="nv">item</span> <span class="p">=</span> <span class="n">DispatchWorkItem</span> <span class="p">{</span>
-    <span class="c1">/// do something </span>
-<span class="p">}</span>
-<span class="c1">// </span>
-<span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">asyncAfter</span><span class="p">(</span><span class="n">deadline</span><span class="p">:</span> <span class="p">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">execute</span><span class="p">:</span> <span class="n">item</span><span class="p">)</span>
-<span class="c1">// cancel if needed</span>
-<span class="n">item</span><span class="p">.</span><span class="n">cancel</span><span class="p">()</span>
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">aStruct</span><span class="p">.</span><span class="n">method</span><span class="p">(</span><span class="s">&quot;first&quot;</span><span class="p">,</span> <span class="s">&quot;second&quot;</span><span class="p">)</span>
+
+<span class="c1">// no objc_msgSend</span>
+
+<span class="cm">/*</span>
+<span class="cm">RDI: first parameter, &quot;first&quot;</span>
+<span class="cm">RSI: second parameter, &quot;second&quot;</span>
+<span class="cm">*/</span>
 </pre></div>
 </td></tr></table>
 
-<h2 id="defer">Defer</h2>
-<p><code>defer</code> 的执行是在当前 scrope 执行之后</p>
-<h3 id="_2">安全地释放资源</h3>
-<p>有了 <code>defer</code> 以后，再也不怕资源忘记释放的问题了！</p>
+<h3 id="examples">Examples</h3>
+<h4 id="read-rdi">Read RDI</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">(</span>lldb<span class="o">)</span> b -<span class="o">[</span>NSWindow mouseDown:<span class="o">]</span>
+<span class="c1"># RDI is the window object (the reference of the calling object)</span>
+<span class="o">(</span>lldb<span class="o">)</span> po <span class="o">[</span><span class="nv">$rdi</span> setBackgroundColor:<span class="o">[</span>NSColor redColor<span class="o">]]</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="uilabel-settext">替换所有 [UILabel setText:] 的方法调用参数</h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -759,68 +987,42 @@
 12
 13
 14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">func</span> <span class="nf">resizeImage</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="bp">NSURL</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">UIImage</span><span class="p">?</span> <span class="p">{</span>
-    <span class="c1">// ...</span>
-    <span class="kd">let</span> <span class="nv">dataSize</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="p">...</span>
-    <span class="kd">let</span> <span class="nv">destData</span> <span class="p">=</span> <span class="nb">UnsafeMutablePointer</span><span class="p">&lt;</span><span class="nb">UInt8</span><span class="p">&gt;.</span><span class="n">alloc</span><span class="p">(</span><span class="n">dataSize</span><span class="p">)</span>
-<span class="hll">    <span class="k">defer</span> <span class="p">{</span>
-</span><span class="hll">        <span class="c1">// 不管这个下面走到哪个分支，只要当前函数执行完，destData 都会被释放</span>
-</span><span class="hll">        <span class="n">destData</span><span class="p">.</span><span class="n">dealloc</span><span class="p">(</span><span class="n">dataSize</span><span class="p">)</span>
-</span><span class="hll">    <span class="p">}</span>
-</span>
-    <span class="kd">var</span> <span class="nv">destBuffer</span> <span class="p">=</span> <span class="n">vImage_Buffer</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">destData</span><span class="p">,</span> <span class="p">...)</span>
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ xcrun simctl list <span class="p">|</span> grep <span class="s2">&quot;iPhone X&quot;</span>
+&gt; iPhone X <span class="o">(</span>A68E22C0-8286-4E60-BF62-92559E15A622<span class="o">)</span> <span class="o">(</span>Shutting Down<span class="o">)</span>
 
-    <span class="c1">// scale the image from sourceBuffer to destBuffer</span>
-    <span class="kd">var</span> <span class="nv">error</span> <span class="p">=</span> <span class="n">vImageScale_ARGB8888</span><span class="p">(&amp;</span><span class="n">sourceBuffer</span><span class="p">,</span> <span class="p">&amp;</span><span class="n">destBuffer</span><span class="p">,</span> <span class="p">...)</span>
-    <span class="k">guard</span> <span class="n">error</span> <span class="p">==</span> <span class="n">kvImageNoError</span> 
-        <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
+$ open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app --args -CurrentDeviceUDID A68E22C0-8286-4E60-BF62-92559E15A622
 
-    <span class="c1">// create a CGImage from the destBuffer</span>
-    <span class="k">guard</span> <span class="kd">let</span> <span class="nv">destCGImage</span> <span class="p">=</span> <span class="n">vImageCreateCGImageFromBuffer</span><span class="p">(&amp;</span><span class="n">destBuffer</span><span class="p">,</span> <span class="p">&amp;</span><span class="n">format</span><span class="p">,</span> <span class="p">...)</span> 
-        <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
-    <span class="c1">// ...</span>
-<span class="p">}</span>
+$ lldb -n SpringBoard
+<span class="o">(</span>lldb<span class="o">)</span> p/x @<span class="s2">&quot;Yay! Debugging&quot;</span>
+&gt; <span class="o">(</span>__NSCFString *<span class="o">)</span> <span class="nv">$3</span> <span class="o">=</span> 0x0000618000644080 @<span class="s2">&quot;Yay! Debugging&quot;</span>
+
+<span class="o">(</span>lldb<span class="o">)</span> b -<span class="o">[</span>UILabel setText:<span class="o">]</span>
+<span class="c1"># 把 $rdx，也就是第一个参数，text 换成 @&quot;Yay! Debugging&quot; 字符串的地址</span>
+<span class="o">(</span>lldb<span class="o">)</span> breakpoint <span class="nb">command</span> add
+&gt; po <span class="nv">$rdx</span> <span class="o">=</span> 0x0000618000644080
+&gt; <span class="k">continue</span>
+&gt; DONE
 </pre></div>
 </td></tr></table>
 
-<h3 id="trick">一个小 trick</h3>
-<p>实现类似 C 中的 <code>x++</code> 效果，巧妙地利用了 <code>defer</code> 的延时特性。也就是在函数返回之后，<code>x</code> 的值才会发生改变。</p>
+<h4 id="hook-all-button-action-events">hook all button action events</h4>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">(</span>lldb<span class="o">)</span> b -<span class="o">[</span>UIControl sendAction:to:forEvent:<span class="o">]</span>
+</pre></div>
+</td></tr></table>
+
+<h4 id="print-viewcontroller-as-they-appear">print viewController as they appear</h4>
+<p>Try attaching to an application on the iOS Simulator and map out the UIViewControllers as they appear using assembly, a smart breakpoint, and a breakpoint command.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">postfix</span> <span class="kd">func</span> <span class="o">++</span><span class="p">(</span><span class="kr">inout</span> <span class="n">x</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
-    <span class="c1">// fuck temp value</span>
-    <span class="kd">let</span> <span class="nv">current</span> <span class="p">=</span> <span class="n">x</span>
-    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">current</span>
-<span class="p">}</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>lldb -n <span class="s1">&#39;Preferences&#39;</span>
+<span class="o">(</span>lldb<span class="o">)</span> b -<span class="o">[</span>UIViewController viewDidLoad<span class="o">]</span>
+<span class="o">(</span>lldb<span class="o">)</span> breakpoint <span class="nb">command</span> add
+&gt; po <span class="nv">$arg1</span>
+&gt; DONE
 </pre></div>
 </td></tr></table>
-
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">postfix</span> <span class="kd">func</span> <span class="o">++</span><span class="p">(</span><span class="kr">inout</span> <span class="n">x</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span> <span class="p">{</span>
-    <span class="c1">// that&#39;s better</span>
-<span class="hll">    <span class="k">defer</span> <span class="p">{</span> <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
-</span>    <span class="k">return</span> <span class="n">x</span>
-<span class="p">}</span>
-</pre></div>
-</td></tr></table>
-
-<h3 id="reference">reference</h3>
-<ul>
-<li>http://nshipster.com/guard-and-defer/</li>
-</ul>
                 
                   
                 
@@ -841,7 +1043,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../frp-in-swift/" title="Frp in swift" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Cheat Sheet/" title="Cheat Sheet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -850,19 +1052,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Frp in swift
+                Cheat Sheet
               </span>
             </div>
           </a>
         
         
-          <a href="../memory-management/" title="Swift 中的内存管理" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../break on swift block/" title="Break on swift block" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Swift 中的内存管理
+                Break on swift block
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
