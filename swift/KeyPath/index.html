@@ -578,6 +578,26 @@
     KeyPath 的应用
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundation" title="Foundation" class="md-nav__link">
+    Foundation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="其它应用" class="md-nav__link">
+    其它应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -715,6 +735,26 @@
     KeyPath 的应用
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#foundation" title="Foundation" class="md-nav__link">
+    Foundation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" title="其它应用" class="md-nav__link">
+    其它应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -755,25 +795,29 @@
 </pre></div>
 </td></tr></table>
 
-<p>上面的代码存在的一个共同问题是 <code>KeyPath</code> 的类型。<code>NSString *</code> 代表你和所谓的安全调用就没有什么关系了，所以就不要指望会有任何编译检查了。如果在未来的某一天，property 的名字发生了变化，上面的代码就会出现问题，所以 Objective-C 中的 KeyPath 并不安全（这样的例子在 Objective-C 中并不少见）。</p>
-<p><a href="https://github.com/jspahrsummers/libextobjc/blob/master/extobjc/EXTKeyPathCoding.h#L38">extobjc 提供的 @keypath 宏</a> 为 KeyPath 提供了编译时期的检查。如果未来 KeyPath 发生变化，就会产生编译错误，以保证代码的安全。</p>
+<p>上面的代码存在的一个共同问题是 <code>KeyPath</code> 参数的类型。<code>NSString *</code> 代表你和所谓的编译检查就没有什么关系了。在未来的某一天，如果 property 的名字发生了变化，代码就会出现问题。所以 Objective-C 中的 KeyPath 并不安全（这样的例子在 Objective-C 中并不少见）。</p>
+<p><a href="https://github.com/jspahrsummers/libextobjc/blob/master/extobjc/EXTKeyPathCoding.h#L38">extobjc 提供的 @keypath 宏</a> 为 KeyPath 提供了编译时期的检查。如果未来 KeyPath 发生变化，就会产生编译错误。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">@</span><span class="n">keypath</span><span class="p">(</span><span class="bp">NSURL</span><span class="p">.</span><span class="n">new</span><span class="p">,</span> <span class="n">baseURL</span><span class="p">);</span>
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">@</span><span class="n">keypath</span><span class="p">(</span><span class="bp">NSURL</span><span class="p">.</span><span class="n">new</span><span class="p">,</span> <span class="n">baseURL</span><span class="p">);</span>
 
-<span class="c1">// equals</span>
+<span class="c1">// 等于</span>
 
+<span class="c1">// 在编译的时候，这个表达式 `NSURL.new.baseURL` 会被执行，如果这个 KeyPath 不存在，编译器会报错</span>
+<span class="c1">// 表达式只会被执行，但真正的返回值是最后的 `@&quot;baseURL&quot;`</span>
 <span class="p">((</span><span class="bp">NSString</span> <span class="o">*</span> <span class="n">_Nonnull</span><span class="p">)</span><span class="l">@(</span><span class="p">(((</span><span class="kt">void</span><span class="p">)(</span><span class="nb">NO</span> <span class="o">&amp;&amp;</span> <span class="p">((</span><span class="kt">void</span><span class="p">)</span><span class="bp">NSURL</span><span class="p">.</span><span class="n">new</span><span class="p">.</span><span class="n">baseURL</span><span class="p">,</span> <span class="nb">NO</span><span class="p">)),</span> <span class="s">&quot;baseURL&quot;</span><span class="p">))</span><span class="l">)</span><span class="p">);</span>
 </pre></div>
 </td></tr></table>
 
-<p>那么 Swift 是如何解决 KeyPath 问题的呢？</p>
+<p>同样的 API，在 Swift 那边调用想必会有类似的问题，那么它是如何解决？</p>
 <h2 id="keypath-in-swift">KeyPath in Swift</h2>
 <h3 id="keypath_1"><code>#keyPath()</code></h3>
-<p><code>#keyPath()</code> 是 Swift 在 <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0062-objc-keypaths.md">3.0 版本实现的</a>类似于上文提到的 <code>@keypath</code> 的表达式，但要比 <code>@keypath</code> 要更强大一些（毕竟它是在<a href="https://github.com/apple/swift/commit/9f0cec4984d7bb23eb242d9eca7c82039310f52d">语言层面的实现</a>），在传递参数的时候，可以直接使用 <code>UILabel.text</code> 而不需要对应的实例存在，如 <code>label.text</code>。</p>
-<p>实现它的主要目的是在使用 Swift 调用与 Objective-C 相关需要 <code>String</code> 类型 KeyPath 的 API 时，提供带有编译检查的，更安全的调用方式。</p>
+<p><code>#keyPath()</code> 是 Swift 在 <a href="https://github.com/apple/swift-evolution/blob/master/proposals/0062-objc-keypaths.md">3.0 版本实现的</a>类似于上文提到的 <code>@keypath</code> 的表达式，但要比 <code>@keypath</code> 要更强大一些（毕竟它是在<a href="https://github.com/apple/swift/commit/9f0cec4984d7bb23eb242d9eca7c82039310f52d">语言层面的实现</a>），在传递参数的时候，可以直接使用 <code>UILabel.text</code> 而不需要对应的实例存在(<code>label.text</code>)。</p>
+<p>实现它的主要目的是在使用 Swift 调用与 Objective-C 相关需要 <code>String</code> 类型 KeyPath 的 API 时，提供带有编译检查的，更  安全的调用方式。</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -810,7 +854,7 @@
 <li>WritableKeyPath</li>
 <li>ReferenceWritableKeyPath</li>
 </ul>
-<p>前者只能修改声明为 <code>var</code> 对象的 KeyPath，后者可以修改 class 对象对应 KeyPath 的 value</p>
+<p>前者只能修改声明为 <code>var</code> 对象(struct 和 class) KeyPath 的 value，后者可以修改 class 对象对应 KeyPath 的 value</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -823,7 +867,8 @@
 10
 11
 12
-13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">Fruit</span> <span class="p">{</span>
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kd">class</span> <span class="nc">Fruit</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nv">name</span> <span class="p">=</span> <span class="s">&quot;Apple&quot;</span>
 <span class="p">}</span>
 
@@ -836,11 +881,27 @@
 <span class="kd">var</span> <span class="nv">f</span> <span class="p">=</span> <span class="n">Fruit</span><span class="p">()</span>
 <span class="kd">let</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="n">WritableKeyPath</span><span class="p">&lt;</span><span class="n">Fruit</span><span class="p">,</span> <span class="nb">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="err">\</span><span class="n">Fruit</span><span class="p">.</span><span class="n">name</span>
 <span class="n">f</span><span class="p">[</span><span class="n">keyPath</span><span class="p">:</span> <span class="n">keyPath</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;Banana&quot;</span> <span class="c1">// f.name ... &quot;Banana&quot;</span>
+<span class="n">f</span><span class="p">[</span><span class="n">keyPath</span><span class="p">:</span> <span class="err">\</span><span class="n">Fruit</span><span class="p">.</span><span class="n">name</span><span class="p">]</span> <span class="p">=</span> <span class="s">&quot;Orange&quot;</span> <span class="c1">// default is ReferenceWritable f.name ... &quot;organ&quot;</span>
 </pre></div>
 </td></tr></table>
 
-<p>KeyPath 让 Swift 看起来很「动态」，但你不能像以前 Objective-C 那样通过 <code>valueForKey:</code> 获取任意一个对象某个 KeyPath 下的属性，或通过 <code>setValue:ForKey:</code> 对任意 KeyPath 设置 value。Private 的 KeyPath 在 Swift 中是获取不到的。但如果你对这样的 Hack 感兴趣，或许你应该看看 Swift 中的 <a href="https://developer.apple.com/documentation/swift/mirror">Mirror</a> 类型或者<a href="https://github.com/Zewo/Reflection">Reflection</a> 这样的 library。Use it under your own risk，我的建议还是能不用就不要用。安全性的动态性本来就是很难平衡的。</p>
+<p>Swift 中的 KeyPath 很灵活，再加上 Swift 强大的类型系统，可以实现很多方便有趣的功能。但它也有缺点。你不能像使用 Objective-C 那样通过 <code>valueForKey:</code> 获取任意一个对象某个 KeyPath 下的属性（比如在类外生成它 private property 的 KeyPath），或通过 <code>setValue:ForKey:</code> 对任意 KeyPath 设置 value。但如果你对这样的 Hack 感兴趣，或许你应该看看 Swift 中的 <a href="https://developer.apple.com/documentation/swift/mirror">Mirror</a> 类型或者 <a href="https://github.com/Zewo/Reflection">Reflection</a> 这样的 library。Use it under your own risk，我的建议还是能不用就不要用。安全性的动态性本来就是很难平衡的。</p>
 <h2 id="keypath_3">KeyPath 的应用</h2>
+<h3 id="foundation">Foundation</h3>
+<p>对于 Foundation 中一些使用 String 作为 KeyPath 的旧 API，Swift 添加了新的 KeyPath<Root, Value> 类型参数的新 API 支持，比如，</p>
+<ul>
+<li><a href="https://github.com/apple/swift/blob/6b68303997d25128c62264371e1ab1c04dc430ed/stdlib/public/SDK/Foundation/NSSortDescriptor.swift#L17">NSSortDescriptor</a></li>
+<li><a href="https://github.com/apple/swift/blob/6b68303997d25128c62264371e1ab1c04dc430ed/stdlib/public/SDK/Foundation/NSExpression.swift#L26">NSExpression</a></li>
+<li><a href="https://github.com/apple/swift/blob/6b68303997d25128c62264371e1ab1c04dc430ed/stdlib/public/SDK/Foundation/NSObject.swift#L195">KVO</a></li>
+</ul>
+<h3 id="_1">其它应用</h3>
+<p>还有一些其它优秀的关于 Swift KeyPath 的应用，大家可以翻翻看，</p>
+<ul>
+<li>https://www.objc.io/blog/2018/04/24/bindings-with-kvo-and-keypaths/</li>
+<li>http://www.chris.eidhof.nl/post/micro-autolayout-dsl/</li>
+<li>https://www.swiftbysundell.com/posts/the-power-of-key-paths-in-swift</li>
+</ul>
+<p>希望大家从我做起，拒绝字符串编程 🙅🏻‍♂️</p>
                 
                   
                 
