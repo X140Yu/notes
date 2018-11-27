@@ -6,10 +6,12 @@
 
 把对应的 Objective-C 头文件放入 `ProductModuleName-Bridging-Header.h` 里
 
+如果在 Pods 中的 Public 文件，不需要做任何操作。因为 Objective-C 中的 public 文件会被引入 `xxx-umbrella.h`，这其中文件会被 Swift 看到
+
 #### 一些好用的关键字
 
 - `NS_SWIFT_NAME`
-- `NS_REFINED_FOR_SWIFT`
+- `NS_REFINED_FOR_SWIFT` 通俗来说就是把一个在 Objective-C 里的方法在 Swift 中重新实现一下。 [Blog](https://briancoyner.github.io/2018/02/10/ns-refined-for-swift.html)
 - `NS_SWIFT_UNAVAILABLE`
 
 ### Objective-C 引 Swift
